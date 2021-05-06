@@ -244,8 +244,8 @@ footer{
   /*border: solid;*/
   // background-color: transparent;
   flex: 0 0 auto;
-  width: 320px;
-  height: 320px;
+  width: 280px;
+  height: 280px;
   margin: 10px;
   /*border: 1px solid black;*/
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
