@@ -1,0 +1,360 @@
+
+@font-face {
+  font-family: 'Kaushan Script';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/kaushan-script-v9-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('./fonts/kaushan-script-v9-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/kaushan-script-v9-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./fonts/kaushan-script-v9-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('./fonts/kaushan-script-v9-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./fonts/kaushan-script-v9-latin-regular.svg#KaushanScript') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/source-sans-pro-v14-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('./fonts/source-sans-pro-v14-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/source-sans-pro-v14-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./fonts/source-sans-pro-v14-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('./fonts/source-sans-pro-v14-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./fonts/source-sans-pro-v14-latin-regular.svg#SourceSansPro') format('svg'); /* Legacy iOS */
+}
+
+
+/* raleway-700 - latin */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./fonts/raleway-v18-latin-700.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('./fonts/raleway-v18-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/raleway-v18-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./fonts/raleway-v18-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('./fonts/raleway-v18-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./fonts/raleway-v18-latin-700.svg#Raleway') format('svg'); /* Legacy iOS */
+}
+
+h1{
+	color: #443F3F;
+	font-family: "Kaushan Script";
+	font-size: 36px;
+}
+
+h2{
+	font-size: 20px;
+	font-family: 'Raleway';
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
+}
+
+ul {
+  list-style :none;
+  padding: 0;
+}
+
+body{
+	margin: 0px;
+	color: #454F5B;
+	font-family: 'Source Sans Pro', sans serif;
+	font-size: 20px;
+	line-height: 1.7;
+	background-color: #fff;
+	text-align: justify;
+}
+
+.main-content{
+	max-width: 770px;
+	margin : 0 auto;
+	padding-left: 12%;
+	padding-right: 12%;
+	margin-top: 70px;
+	/*margin-left: 12%;  or responsive design !
+	margin-top: 70px;*/
+}
+
+em{
+	font-style: italic;
+}
+
+strong{
+	font-weight: 600;
+}
+
+/*********************************************/
+
+.overlay{
+	pointer-events: none; /* to allow clicking on underlying links */
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity: 1;
+}
+
+.header-inner{
+	max-width: 100%;
+	height: 300px;
+	object-fit: cover;
+	vertical-align: middle;
+	opacity: 0.5;
+}
+
+header{
+	width: 100%;
+	height: 100px;
+	position: fixed;
+	color: #fff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	/*background-color: #A6CBCC;*/
+  transition: all 0.4s linear;
+	/*transition: background-color 1s linear;*/
+	z-index: 1;
+}
+
+.site-description{
+	/*border:solid;*/
+	width: 100%;
+	max-width: 350px;
+	display: flex;
+	margin-left: 3%;
+	line-height: 1;
+	transition: all 0.4s linear;
+}
+
+.avatar{
+	/*border:solid;*/
+	position: relative;
+	top: 1px;
+
+}
+
+header {
+  margin-top: 30px;
+}
+
+header h1{
+	color: #fff;
+}
+
+header h2{
+	position: relative;
+  font-size: 12px;
+	bottom: 16px;
+}
+
+nav{
+	/*border:solid;*/
+	width: 100%;
+  margin-right: 25px;
+	transition:all 0.4s linear;
+	display: flex;
+	justify-content: space-around;
+	list-style-type: none;
+
+}
+
+nav a:hover{
+	border-bottom: solid 2px #9CC5C7;
+	color: #9CC5C7;
+}
+
+/*Dropdown menu*/
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+  color: black !important;
+  padding: 6px 8px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover{
+	/*border-bottom: none !important;*/
+	color: #9CC5C7 !important;
+	background-color: black;
+	border: solid 2px #f1f1f1;
+}
+
+/*.dropdown-content a:hover {background-color: #@ddd;}*/
+
+.dropdown:hover .dropdown-content {display: block;}
+
+/*.dropdown:hover .dropdown-menu {background-color: #3e8e41;}*/
+/*...*/
+
+
+.note{
+	font-size: 16px;
+	line-height: 1;
+}
+
+.main-content a{
+	color: #9CC5C7;
+	font-weight: 300;
+}
+
+footer{
+	width: 100%;
+	height: 40px;
+	color: #000;
+	background-color: #464F5B;
+	display: flex;
+	align-items: center;
+}
+
+
+
+
+/*FLIP CARDS*/
+.flip-cards-container {
+  /*border: solid black;*/
+  /*width: 100%;*/
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  /*border: solid;*/
+  // background-color: transparent;
+  flex: 0 0 auto;
+  width: 320px;
+  height: 320px;
+  margin: 10px;
+  /*border: 1px solid black;*/
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  box-shadow: 0 10px 30px rgba(0,0,0,.3);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+
+/* Style the back side */
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+.flip-card-back > ul {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+}
+
+.bullet {
+  color: #A6CBCC;
+}
+
+.enfants {
+  background-image: url("flip-cards-images/enfants.png");
+  background-size: contain;
+}
+
+.ados {
+  background-image: url("flip-cards-images/ados.png");
+  background-size: contain;
+}
+
+.etudiants {
+  background-image: url("flip-cards-images/etudiants.png");
+  background-size: contain;
+}
+
+.grossesse {
+  background-image: url("flip-cards-images/grossesse.png");
+  background-size: contain;
+}
+
+.sommeil {
+  background-image: url("flip-cards-images/sommeil.png");
+  background-size: contain;
+}
+
+.douleurs {
+  background-image: url("flip-cards-images/douleurs.png");
+  background-size: contain;
+}
+
+.intervention {
+  background-image: url("flip-cards-images/intervention.png");
+  background-size: contain;
+}
+
+.mal-etre {
+  background-image: url("flip-cards-images/mal-etre.png");
+  background-size: contain;
+}
+
+.maladies {
+  background-image: url("flip-cards-images/maladies.png");
+  background-size: contain;
+}
+
+.sport {
+  background-image: url("flip-cards-images/sport.png");
+  background-size: contain;
+}
+
+.performance {
+  background-image: url("flip-cards-images/performance.png");
+  background-size: contain;
+}
+
+.developpement {
+  background-image: url("flip-cards-images/developpement-personnel.png");
+  background-size: contain;
+}
+/*FLIP CARDS*/
