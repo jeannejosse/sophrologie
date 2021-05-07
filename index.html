@@ -22,18 +22,24 @@
     </div>
 
     <nav>
+      <a href="index.html" class="underline">Accueil</a>
+
       <div class="dropdown">
-        <a class="dropdown-menu" href="sophrologie.html">La sophrologie</a>
+        <a class="dropdown-menu underline" href="sophrologie.html">La sophrologie</a>
         <div class="dropdown-content">
-          <a href="sophrologie.html">Qu'est-ce que c'est ?</a>
-          <a href="pour_qui.html">Pour qui ?</a>
-          <a href="pour_quoi.html">Pour quoi ?</a>
+          <a href="sophrologie.html" class="underline">Qu'est-ce que c'est ?</a>
+          <a href="pour_qui.html" class="underline">Pour qui ?</a>
+          <a href="pour_quoi.html" class="underline">Pour quoi ?</a>
         </div>
       </div>
 
-      <a href="coherence_cardiaque.html">Cohérence cardiaque</a>
-      <a href="a_propos.html">A propos</a>
-      <a href="infos_pratiques.html">Infos pratiques</a>
+      <a href="coherence_cardiaque.html" class="underline">Cohérence cardiaque</a>
+
+      <a href="qui_suis_je.html" class="underline">Qui suis-je ?</a>
+
+      <a href="https://www.doctolib.fr/sophrologue/morsang-sur-orge/jeanne-josse" id="RDV">Prendre RDV</a>
+
+
     </nav>
   </header>
 
@@ -321,15 +327,15 @@
 
       document.querySelector("header").style.background = "transparent";
 
-      for (let i in document.querySelectorAll("nav a")){
-        document.querySelectorAll("nav a")[i].addEventListener("mouseover",function (){
-          document.querySelectorAll("nav a")[i].style.color ="#9CC5C7";
-          document.querySelectorAll("nav a")[i].style.borderBottom ="solid 2px #9CC5C7";
+      for (let i in document.querySelectorAll("nav a.underline")){
+        document.querySelectorAll("nav a.underline")[i].addEventListener("mouseover",function (){
+          document.querySelectorAll("nav a.underline")[i].style.color ="#9CC5C7";
+          document.querySelectorAll("nav a.underline")[i].style.borderBottom ="solid 2px #9CC5C7";
         });
 
-        document.querySelectorAll("nav a")[i].addEventListener("mouseout",function (){
-          document.querySelectorAll("nav a")[i].style.color ="#fff";
-          //document.querySelectorAll(".nav a")[i].style.borderBottom ="solid 2px #9CC5C7";
+        document.querySelectorAll("nav a.underline")[i].addEventListener("mouseout",function (){
+          document.querySelectorAll("nav a.underline")[i].style.color ="#fff";
+          //document.querySelectorAll(".nav a.underline")[i].style.borderBottom ="solid 2px #9CC5C7";
         });
       };
 
@@ -343,15 +349,15 @@
 
       document.querySelector("header").style.background = "rgba(166, 203, 204,0.90)";
 
-      for (let i in document.querySelectorAll("nav a")){
-        document.querySelectorAll("nav a")[i].addEventListener("mouseover",function (){
-          document.querySelectorAll("nav a")[i].style.color ="#000";
-          document.querySelectorAll("nav a")[i].style.borderBottom ="solid 2px #000";
+      for (let i in document.querySelectorAll("nav a.underline")){
+        document.querySelectorAll("nav a.underline")[i].addEventListener("mouseover",function (){
+          document.querySelectorAll("nav a.underline")[i].style.color ="#000";
+          document.querySelectorAll("nav a.underline")[i].style.borderBottom ="solid 2px #000";
         });
 
-        document.querySelectorAll("nav a")[i].addEventListener("mouseout",function (){
-          document.querySelectorAll("nav a")[i].style.color ="#fff";
-          document.querySelectorAll("nav a")[i].style.borderBottom ="none";
+        document.querySelectorAll("nav a.underline")[i].addEventListener("mouseout",function (){
+          document.querySelectorAll("nav a.underline")[i].style.color ="#fff";
+          document.querySelectorAll("nav a.underline")[i].style.borderBottom ="none";
         });
       };
 

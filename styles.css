@@ -163,9 +163,25 @@ nav{
 
 }
 
-nav a:hover{
+a.underline:hover{
 	border-bottom: solid 2px #9CC5C7;
 	color: #9CC5C7;
+}
+
+nav > #RDV {
+  background-color: #0596de;
+  width: 132px;
+  height: 40px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s linear;
+}
+
+nav > a#RDV:hover {
+  border-bottom: none;
+  background-color: #13689E;
 }
 
 /*Dropdown menu*/
@@ -203,6 +219,8 @@ nav a:hover{
 
 /*.dropdown:hover .dropdown-menu {background-color: #3e8e41;}*/
 /*...*/
+
+
 
 
 .note{
@@ -247,6 +265,7 @@ footer{
   width: 280px;
   height: 280px;
   margin: 10px;
+  margin: 20px 10px;
   /*border: 1px solid black;*/
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 
