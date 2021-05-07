@@ -237,7 +237,7 @@ nav > a#RDV:hover {
 	font-weight: 300;
 }
 
-.contact {
+.contact, .tarifs{
   width: 90%;
   margin: 0 auto;
   display: flex;
@@ -245,11 +245,50 @@ nav > a#RDV:hover {
   align-items: center;
 }
 
+.contact-text, .tarifs-text {
+  height: 260px;
+  margin-top: 40px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.contact-text {
+  margin-right: 32px;
+}
+
+.tarifs-text {
+  margin-left: 32px;
+}
+
+.contact-text > h1, .tarifs-text > h1 {
+  margin-top: 0;
+  line-height: 0.8;
+}
+
+.contact-text > p, .tarifs-text > p, .infos-covid  {
+  font-size: 16px;
+}
+
 img.photo-cab {
   height: 260px;
   margin-top: 40px;
   box-shadow: 0 10px 30px rgba(0,0,0,.3);
   border-radius: 4px;
+}
+
+.infos-covid {
+  border: solid orange;
+  width: 480px;
+  margin: 0 auto;
+  padding: 5px 0;
+  text-align: center;
+  /*color: white;*/
+  border-radius: 16px;
+  background-color: white;
+  box-shadow: 0 10px 30px rgba(0,0,0,.3);
 }
 
 /*FOOTER*/
