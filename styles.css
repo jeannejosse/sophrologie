@@ -89,6 +89,9 @@ strong{
 	font-weight: 600;
 }
 
+.text-centered {
+  text-align: center;
+}
 /*********************************************/
 
 .overlay{
@@ -177,6 +180,7 @@ nav > #RDV {
   justify-content: center;
   align-items: center;
   transition: all 0.2s linear;
+  box-shadow: 0 10px 30px rgba(0,0,0,.3);
 }
 
 nav > a#RDV:hover {
@@ -233,14 +237,88 @@ nav > a#RDV:hover {
 	font-weight: 300;
 }
 
+.contact {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+img.photo-cab {
+  height: 260px;
+  margin-top: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.3);
+  border-radius: 4px;
+}
+
+/*FOOTER*/
 footer{
 	width: 100%;
-	height: 40px;
+	height: 80px;
 	color: #000;
 	background-color: #464F5B;
 	display: flex;
+  /*flex-direction: column;*/
+  justify-content: center;
 	align-items: center;
 }
+
+.doctolib {
+  width: 132px;
+  padding-top: 4px;
+}
+
+.linkedin {
+  height: 32px;
+  margin-right: 24px;
+}
+
+.facebook {
+  height: 32px;
+  margin-right: 24px;
+}
+
+.instagram {
+  height: 37px;
+  margin-right: 24px;
+}
+
+
+/*.doctolib:hover {
+  border-radius: 32px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.3);
+}
+*/
+
+.fab{
+  color: white;
+  font-size: 32px;
+}
+
+.fa-facebook-square:hover {
+  color: black;
+}
+
+.fa-instagram-square:hover {
+  color: black;
+}
+
+.fa-linkedin:hover {
+  color: black;
+}
+
+.list-inline > li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.list-inline {
+  list-style: none;
+  padding-left: 0px;
+}
+
+/*FOOTER*/
 
 
 
