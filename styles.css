@@ -56,10 +56,7 @@ a{
 	color: inherit;
 }
 
-ul {
-  list-style :none;
-  padding: 0;
-}
+
 
 body{
 	margin: 0px;
@@ -76,7 +73,7 @@ body{
 	margin : 0 auto;
 	padding-left: 12%;
 	padding-right: 12%;
-	margin-top: 70px;
+	margin-top: 32px;
 	/*margin-left: 12%;  or responsive design !
 	margin-top: 70px;*/
 }
@@ -92,6 +89,17 @@ strong{
 .text-centered {
   text-align: center;
 }
+
+ul.centered-list {
+  text-align: center;
+  list-style: none;
+}
+
+img.centered {
+  display:block;
+  margin: 0 auto;
+}
+
 /*********************************************/
 
 .overlay{
@@ -248,7 +256,7 @@ nav > a#RDV:hover {
 .contact-text, .tarifs-text {
   height: 260px;
   margin-top: 40px;
-  overflow-y: scroll;
+  /*overflow-y: scroll;*/
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -283,7 +291,7 @@ img.photo-cab {
   border: solid orange;
   width: 480px;
   margin: 0 auto;
-  padding: 5px 0;
+  padding: 10px 0;
   text-align: center;
   /*color: white;*/
   border-radius: 16px;
@@ -386,6 +394,11 @@ footer{
   /*border: 1px solid black;*/
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 
+}
+
+.flip-card ul {
+  list-style: none;
+  padding: 0;
 }
 
 /* This container is needed to position the front and back side */
