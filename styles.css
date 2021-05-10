@@ -208,6 +208,10 @@ nav > a#RDV:hover {
   display: inline-block;
 }
 
+.dropdown > a {
+  padding-bottom: 9px;
+}
+
 .dropdown-content {
   display: none;
   position: absolute;
