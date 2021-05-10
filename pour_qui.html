@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cohérence cardiaque – Jeanne Josse</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+	<header>
+    <div class="site-description">
+      <div class="avatar"><img src="images/avatar_contour.png" width="140" alt="avatar"></div>
+      <div class="slogan">
+        <h1><a href="index.html">Jeanne Josse</a></h1>
+        <h2>Sophrologue à Morsang-sur-Orge</h2>
+      </div>
+    </div>
+
+    <nav>
+      <a href="index.html" class="underline">Accueil</a>
+
+      <div class="dropdown">
+        <a class="dropdown-menu underline" href="sophrologie.html">La sophrologie</a>
+        <div class="dropdown-content">
+          <a href="sophrologie.html" class="underline">Qu'est-ce que c'est ?</a>
+          <a href="pour_qui.html" class="underline">Pour qui ?</a>
+          <a href="pour_quoi.html" class="underline">Pour quoi ?</a>
+        </div>
+      </div>
+
+      <a href="coherence_cardiaque.html" class="underline">Cohérence cardiaque</a>
+
+      <a href="qui_suis_je.html" class="underline">Qui suis-je ?</a>
+
+      <a href="https://www.doctolib.fr/sophrologue/morsang-sur-orge/jeanne-josse" id="RDV">Prendre RDV</a>
+
+
+    </nav>
+  </header>
+
+  <div class="overlay">
+    <img class="header-inner" src="images/banner.jpg" width="1920" alt="Jeanne Josse" title="Jeanne Josse">
+  </div>
+
+
+	<main class="main-content">
+		<h1 style="text-align: center; font-size: 48px;">La sophrologie</h1>
+		<h1>Pour qui ?</h1>
+
+    <p>La sophrologie étant un outil adaptable, elle est <strong>accessible à tous</strong> (enfants, ados, adultes) <strong>dès l’âge de 4 an</strong>s.</p>
+
+    <p>Le rôle du sophrologue est de <strong>s’adapter à chacun en fonction de ses capacités physiques </strong>(facilité à se mouvoir ou non), <strong>mentales</strong> (temps de concentration plus limité chez l’enfant que chez l’adulte) ainsi qu’en fonction des <strong>centres d’intérêts</strong> et de la <strong>demande</strong> : l’approche ne sera pas la même avec un sportif souhaitant se préparer à une compétition, une personne souhaitant un accompagnement pour faire face au cancer ou un enfant ayant des difficultés à se concentrer.</p>
+
+    <p>C’est là toute la richesse de la sophrologie : <strong>une méthode pouvant aider chacun</strong> et ce grâce à l’écoute et à la créativité du sophrologue.</p>
+
+    <p>Avec les <strong>enfants</strong>, la sophrologie est abordée à travers des exercices <strong>ludiques</strong> ainsi que des contes afin de capter leur attention tout en leur permettant d’enrichir leur monde imaginaire.</p>
+
+    <br>
+    <br>
+    <br>
+	</main>
+
+	 <footer class="footer">
+    <a href="https://www.doctolib.fr/sophrologue/morsang-sur-orge/jeanne-josse" target="_blank"><img src="images/doctolib.png" alt="Lien Doctolib" class="doctolib"></a>
+    <a href="https://www.linkedin.com/in/jeanne-josse-3b7957176/?originalSubdomain=fr" target="_blank"><img src="images/linkedin.png" alt="Lien Linkedin" class="linkedin"></a>
+    <a href="https://www.instagram.com/jeanne.josse/" target="_blank"><img src="images/instagram.png" alt="Lien instagram" class="instagram"></a>
+    <a href="https://www.facebook.com/JeanneJosseSophrologue/photos/?ref=page_internal" target="_blank"><img src="images/facebook.png" alt="Lien Facebook" class="facebook"></a>
+  </footer>
+
+</body>
+
+
+<script>
+  window.addEventListener('scroll',function(e){
+    if(window.scrollY < 176) {
+      // document.querySelector(".site-description").style.position = "relative";
+      // document.querySelector(".site-description").style.top = "30px";
+      // document.querySelector("nav").style.position = "relative";
+      // document.querySelector("nav").style.top = "30px";
+      document.querySelector("header").style.marginTop = "30px";
+
+      document.querySelector("header").style.background = "transparent";
+
+      for (let i in document.querySelectorAll("nav a")){
+        document.querySelectorAll("nav a")[i].addEventListener("mouseover",function (){
+          document.querySelectorAll("nav a")[i].style.color ="#9CC5C7";
+          document.querySelectorAll("nav a")[i].style.borderBottom ="solid 2px #9CC5C7";
+        });
+
+        document.querySelectorAll("nav a")[i].addEventListener("mouseout",function (){
+          document.querySelectorAll("nav a")[i].style.color ="#fff";
+          //document.querySelectorAll(".nav a")[i].style.borderBottom ="solid 2px #9CC5C7";
+        });
+      };
+
+    } else if(window.scrollY > 176) {
+      // Note: we could implement a loop to iterate over querySelectorAll matches (Nodelist)
+      // document.querySelector(".site-description").style.position = "relative";
+      // document.querySelector(".site-description").style.top = "0px";
+      // document.querySelector("nav").style.position = "relative";
+      // document.querySelector("nav").style.top = "0px";
+      document.querySelector("header").style.marginTop = "0px";
+
+      document.querySelector("header").style.background = "rgba(166, 203, 204,0.90)";
+
+      for (let i in document.querySelectorAll("nav a")){
+        document.querySelectorAll("nav a")[i].addEventListener("mouseover",function (){
+          document.querySelectorAll("nav a")[i].style.color ="#000";
+          document.querySelectorAll("nav a")[i].style.borderBottom ="solid 2px #000";
+        });
+
+        document.querySelectorAll("nav a")[i].addEventListener("mouseout",function (){
+          document.querySelectorAll("nav a")[i].style.color ="#fff";
+          document.querySelectorAll("nav a")[i].style.borderBottom ="none";
+        });
+      };
+
+
+    };
+  });
+  </script>
+
+</html>
