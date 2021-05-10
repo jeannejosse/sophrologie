@@ -30,7 +30,7 @@
         </div>
       </div>
 
-      <a href="coherence_cardiaque.html" class="underline">Cohérence cardiaque</a>
+      <a href="coherence_cardiaque.html" class="active">Cohérence cardiaque</a>
 
       <a href="qui_suis_je.html" class="underline">Qui suis-je ?</a>
 
@@ -114,7 +114,8 @@
 		<h1>Outils de cohérence cardiaque</h1>
 		<p>Pour vous aider dans votre pratique de la cohérence cardiaque, il existe diverses applications <strong>(Respira, Respirelax...)</strong>.</p>
 
-		<p>Si vous ne souhaitez pas télécharger d’application, vous trouverez de nombreux <strong>guides respiratoires de cohérence cardiaque</strong> sur Youtube ou sur : <a href="https://www.coherenceinfo.com/respirotheque/">https://www.coherenceinfo.com/respirotheque/</a></p>
+		<p>Si vous ne souhaitez pas télécharger d’application, vous trouverez de nombreux <strong>guides respiratoires de cohérence cardiaque</strong> sur Youtube ou sur :</p>
+    <p class="text-centered"><a href="https://www.coherenceinfo.com/respirotheque/">https://www.coherenceinfo.com/respirotheque/</a></p>
 
 		<br>
 		<br>
@@ -142,15 +143,18 @@
 
       document.querySelector("header").style.background = "transparent";
 
-      for (let i in document.querySelectorAll("nav a")){
-        document.querySelectorAll("nav a")[i].addEventListener("mouseover",function (){
-          document.querySelectorAll("nav a")[i].style.color ="#9CC5C7";
-          document.querySelectorAll("nav a")[i].style.borderBottom ="solid 2px #9CC5C7";
+      document.querySelector("nav .active").style.color = "#9CC5C7";
+      document.querySelector("nav .active").style.borderBottom ="solid 2px #9CC5C7";
+
+      for (let i in document.querySelectorAll("nav a.underline")){
+        document.querySelectorAll("nav a.underline")[i].addEventListener("mouseover",function (){
+          document.querySelectorAll("nav a.underline")[i].style.color ="#9CC5C7";
+          document.querySelectorAll("nav a.underline")[i].style.borderBottom ="solid 2px #9CC5C7";
         });
 
-        document.querySelectorAll("nav a")[i].addEventListener("mouseout",function (){
-          document.querySelectorAll("nav a")[i].style.color ="#fff";
-          //document.querySelectorAll(".nav a")[i].style.borderBottom ="solid 2px #9CC5C7";
+        document.querySelectorAll("nav a.underline")[i].addEventListener("mouseout",function (){
+          document.querySelectorAll("nav a.underline")[i].style.color ="#fff";
+          //document.querySelectorAll(".nav a.underline")[i].style.borderBottom ="solid 2px #9CC5C7";
         });
       };
 
@@ -164,15 +168,18 @@
 
       document.querySelector("header").style.background = "rgba(166, 203, 204,0.90)";
 
-      for (let i in document.querySelectorAll("nav a")){
-        document.querySelectorAll("nav a")[i].addEventListener("mouseover",function (){
-          document.querySelectorAll("nav a")[i].style.color ="#000";
-          document.querySelectorAll("nav a")[i].style.borderBottom ="solid 2px #000";
+      document.querySelector("nav .active").style.color = "#000";
+      document.querySelector("nav .active").style.borderBottom ="solid 2px #000";
+
+      for (let i in document.querySelectorAll("nav a.underline")){
+        document.querySelectorAll("nav a.underline")[i].addEventListener("mouseover",function (){
+          document.querySelectorAll("nav a.underline")[i].style.color ="#000";
+          document.querySelectorAll("nav a.underline")[i].style.borderBottom ="solid 2px #000";
         });
 
-        document.querySelectorAll("nav a")[i].addEventListener("mouseout",function (){
-          document.querySelectorAll("nav a")[i].style.color ="#fff";
-          document.querySelectorAll("nav a")[i].style.borderBottom ="none";
+        document.querySelectorAll("nav a.underline")[i].addEventListener("mouseout",function (){
+          document.querySelectorAll("nav a.underline")[i].style.color ="#fff";
+          document.querySelectorAll("nav a.underline")[i].style.borderBottom ="none";
         });
       };
 

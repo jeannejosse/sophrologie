@@ -179,6 +179,11 @@ a.underline:hover{
 	color: #9CC5C7;
 }
 
+.active {
+  border-bottom: solid 2px #9CC5C7;
+  color: #9CC5C7;
+}
+
 nav > #RDV {
   background-color: #0596de;
   width: 132px;

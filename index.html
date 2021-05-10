@@ -22,7 +22,7 @@
     </div>
 
     <nav>
-      <a href="index.html" class="underline">Accueil</a>
+      <a href="index.html" class="active">Accueil</a>
 
       <div class="dropdown">
         <a class="dropdown-menu underline" href="sophrologie.html">La sophrologie</a>
@@ -365,6 +365,9 @@
 
       document.querySelector("header").style.background = "transparent";
 
+      document.querySelector("nav .active").style.color = "#9CC5C7";
+      document.querySelector("nav .active").style.borderBottom ="solid 2px #9CC5C7";
+
       for (let i in document.querySelectorAll("nav a.underline")){
         document.querySelectorAll("nav a.underline")[i].addEventListener("mouseover",function (){
           document.querySelectorAll("nav a.underline")[i].style.color ="#9CC5C7";
@@ -386,6 +389,9 @@
       document.querySelector("header").style.marginTop = "0px";
 
       document.querySelector("header").style.background = "rgba(166, 203, 204,0.90)";
+
+      document.querySelector("nav .active").style.color = "#000";
+      document.querySelector("nav .active").style.borderBottom ="solid 2px #000";
 
       for (let i in document.querySelectorAll("nav a.underline")){
         document.querySelectorAll("nav a.underline")[i].addEventListener("mouseover",function (){

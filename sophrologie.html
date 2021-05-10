@@ -25,7 +25,7 @@
       <a href="index.html" class="underline">Accueil</a>
 
       <div class="dropdown">
-        <a class="dropdown-menu underline" href="sophrologie.html">La sophrologie</a>
+        <a class="dropdown-menu active" href="sophrologie.html">La sophrologie</a>
         <div class="dropdown-content">
           <a href="sophrologie.html" class="underline">Qu'est-ce que c'est ?</a>
           <a href="pour_qui.html" class="underline">Pour qui ?</a>
@@ -108,58 +108,60 @@
 
 
 <script>
-	window.addEventListener('scroll',function(e){
-		if(window.scrollY < 176) {
-			// document.querySelector(".site-description").style.position = "relative";
-			// document.querySelector(".site-description").style.top = "30px";
-			// document.querySelector("nav").style.position = "relative";
-			// document.querySelector("nav").style.top = "30px";
+  window.addEventListener('scroll',function(e){
+    if(window.scrollY < 176) {
+      // document.querySelector(".site-description").style.position = "relative";
+      // document.querySelector(".site-description").style.top = "30px";
+      // document.querySelector("nav").style.position = "relative";
+      // document.querySelector("nav").style.top = "30px";
       document.querySelector("header").style.marginTop = "30px";
 
-			document.querySelector("header").style.background = "transparent";
+      document.querySelector("header").style.background = "transparent";
 
-			for (let i in document.querySelectorAll("nav a")){
-				document.querySelectorAll("nav a")[i].addEventListener("mouseover",function (){
-					document.querySelectorAll("nav a")[i].style.color ="#9CC5C7";
-					document.querySelectorAll("nav a")[i].style.borderBottom ="solid 2px #9CC5C7";
-				});
+      document.querySelector("nav .active").style.color = "#9CC5C7";
+      document.querySelector("nav .active").style.borderBottom ="solid 2px #9CC5C7";
 
-				document.querySelectorAll("nav a")[i].addEventListener("mouseout",function (){
-					document.querySelectorAll("nav a")[i].style.color ="#fff";
-					//document.querySelectorAll(".nav a")[i].style.borderBottom ="solid 2px #9CC5C7";
-				});
-			};
+      for (let i in document.querySelectorAll("nav a.underline")){
+        document.querySelectorAll("nav a.underline")[i].addEventListener("mouseover",function (){
+          document.querySelectorAll("nav a.underline")[i].style.color ="#9CC5C7";
+          document.querySelectorAll("nav a.underline")[i].style.borderBottom ="solid 2px #9CC5C7";
+        });
 
-		} else if(window.scrollY > 176) {
-			// Note: we could implement a loop to iterate over querySelectorAll matches (Nodelist)
-			// document.querySelector(".site-description").style.position = "relative";
-			// document.querySelector(".site-description").style.top = "0px";
-			// document.querySelector("nav").style.position = "relative";
-			// document.querySelector("nav").style.top = "0px";
+        document.querySelectorAll("nav a.underline")[i].addEventListener("mouseout",function (){
+          document.querySelectorAll("nav a.underline")[i].style.color ="#fff";
+          //document.querySelectorAll(".nav a.underline")[i].style.borderBottom ="solid 2px #9CC5C7";
+        });
+      };
+
+    } else if(window.scrollY > 176) {
+      // Note: we could implement a loop to iterate over querySelectorAll matches (Nodelist)
+      // document.querySelector(".site-description").style.position = "relative";
+      // document.querySelector(".site-description").style.top = "0px";
+      // document.querySelector("nav").style.position = "relative";
+      // document.querySelector("nav").style.top = "0px";
       document.querySelector("header").style.marginTop = "0px";
 
-			document.querySelector("header").style.background = "rgba(166, 203, 204,0.90)";
+      document.querySelector("header").style.background = "rgba(166, 203, 204,0.90)";
 
-			for (let i in document.querySelectorAll("nav a")){
-				document.querySelectorAll("nav a")[i].addEventListener("mouseover",function (){
-					document.querySelectorAll("nav a")[i].style.color ="#000";
-					document.querySelectorAll("nav a")[i].style.borderBottom ="solid 2px #000";
-				});
+      document.querySelector("nav .active").style.color = "#000";
+      document.querySelector("nav .active").style.borderBottom ="solid 2px #000";
 
-				document.querySelectorAll("nav a")[i].addEventListener("mouseout",function (){
-					document.querySelectorAll("nav a")[i].style.color ="#fff";
-					document.querySelectorAll("nav a")[i].style.borderBottom ="none";
-				});
-			};
+      for (let i in document.querySelectorAll("nav a.underline")){
+        document.querySelectorAll("nav a.underline")[i].addEventListener("mouseover",function (){
+          document.querySelectorAll("nav a.underline")[i].style.color ="#000";
+          document.querySelectorAll("nav a.underline")[i].style.borderBottom ="solid 2px #000";
+        });
 
-
-		};
-	});
-
+        document.querySelectorAll("nav a.underline")[i].addEventListener("mouseout",function (){
+          document.querySelectorAll("nav a.underline")[i].style.color ="#fff";
+          document.querySelectorAll("nav a.underline")[i].style.borderBottom ="none";
+        });
+      };
 
 
-
-	</script>
+    };
+  });
+  </script>
 
 </html>
 
