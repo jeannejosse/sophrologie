@@ -217,13 +217,17 @@ nav > a#RDV:hover {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f1f1f1;
   min-width: 200px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+  background-color: transparent;
+  left: -46px;
+  text-align: center;
+  border-radius: 4px;
 }
 
 .dropdown-content a {
-  color: black !important;
+  /*color: black !important;*/
   padding: 6px 8px;
   text-decoration: none;
   display: block;
@@ -232,9 +236,9 @@ nav > a#RDV:hover {
 
 .dropdown-content a:hover{
 	/*border-bottom: none !important;*/
-	color: #9CC5C7 !important;
-	background-color: black;
-	border: solid 2px #f1f1f1;
+	color: #9CC5C7 ;
+	/*background-color: black;*/
+	border: solid 2px #9CC5C7;
 }
 
 /*.dropdown-content a:hover {background-color: #@ddd;}*/

@@ -25,9 +25,9 @@
       <div class="dropdown">
         <a class="dropdown-menu underline" href="sophrologie.html">Sophrologie</a>
         <div class="dropdown-content">
-          <a href="sophrologie.html" class="underline">Qu'est-ce que c'est ?</a>
-          <a href="pour_qui.html" class="underline">Pour qui ?</a>
-          <a href="pour_quoi.html" class="underline">Pour quoi ?</a>
+          <a href="sophrologie.html">Qu'est-ce que c'est ?</a>
+          <a href="pour_qui.html">Pour qui ?</a>
+          <a href="pour_quoi.html">Pour quoi ?</a>
         </div>
       </div>
 
@@ -87,62 +87,8 @@
     <a href="https://www.facebook.com/JeanneJosseSophrologue/photos/?ref=page_internal" target="_blank"><img src="images/facebook.png" alt="Lien Facebook" class="facebook"></a>
   </footer>
 
+  <script type="text/javascript" src="navbar.js"></script>
+
 </body>
 
-
-<script>
-  window.addEventListener('scroll',function(e){
-    if(window.scrollY < 176) {
-      // document.querySelector(".site-description").style.position = "relative";
-      // document.querySelector(".site-description").style.top = "30px";
-      // document.querySelector("nav").style.position = "relative";
-      // document.querySelector("nav").style.top = "30px";
-      document.querySelector("header").style.marginTop = "30px";
-
-      document.querySelector("header").style.background = "transparent";
-
-      document.querySelector("nav .active").style.color = "#9CC5C7";
-      document.querySelector("nav .active").style.borderBottom ="solid 2px #9CC5C7";
-
-      for (let i in document.querySelectorAll("nav a.underline")){
-        document.querySelectorAll("nav a.underline")[i].addEventListener("mouseover",function (){
-          document.querySelectorAll("nav a.underline")[i].style.color ="#9CC5C7";
-          document.querySelectorAll("nav a.underline")[i].style.borderBottom ="solid 2px #9CC5C7";
-        });
-
-        document.querySelectorAll("nav a.underline")[i].addEventListener("mouseout",function (){
-          document.querySelectorAll("nav a.underline")[i].style.color ="#fff";
-          //document.querySelectorAll(".nav a.underline")[i].style.borderBottom ="solid 2px #9CC5C7";
-        });
-      };
-
-    } else if(window.scrollY > 176) {
-      // Note: we could implement a loop to iterate over querySelectorAll matches (Nodelist)
-      // document.querySelector(".site-description").style.position = "relative";
-      // document.querySelector(".site-description").style.top = "0px";
-      // document.querySelector("nav").style.position = "relative";
-      // document.querySelector("nav").style.top = "0px";
-      document.querySelector("header").style.marginTop = "0px";
-
-      document.querySelector("header").style.background = "rgba(166, 203, 204,0.90)";
-
-      document.querySelector("nav .active").style.color = "#000";
-      document.querySelector("nav .active").style.borderBottom ="solid 2px #000";
-
-      for (let i in document.querySelectorAll("nav a.underline")){
-        document.querySelectorAll("nav a.underline")[i].addEventListener("mouseover",function (){
-          document.querySelectorAll("nav a.underline")[i].style.color ="#000";
-          document.querySelectorAll("nav a.underline")[i].style.borderBottom ="solid 2px #000";
-        });
-
-        document.querySelectorAll("nav a.underline")[i].addEventListener("mouseout",function (){
-          document.querySelectorAll("nav a.underline")[i].style.color ="#fff";
-          document.querySelectorAll("nav a.underline")[i].style.borderBottom ="none";
-        });
-      };
-
-
-    };
-  });
-  </script>
 </html>
