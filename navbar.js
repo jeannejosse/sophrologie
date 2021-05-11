@@ -1,4 +1,13 @@
 window.addEventListener('scroll',function(e){
+    if(window.scrollY < 88) {
+      document.querySelector(".dropdown-content").style.backgroundColor ="transparent";
+      document.querySelector(".dropdown-content").style.color ="white";
+
+    } else {
+      document.querySelector(".dropdown-content").style.backgroundColor ="white";
+      document.querySelector(".dropdown-content").style.color ="black";
+    }
+
     if(window.scrollY < 176) {
       // document.querySelector(".site-description").style.position = "relative";
       // document.querySelector(".site-description").style.top = "30px";
@@ -11,8 +20,6 @@ window.addEventListener('scroll',function(e){
       document.querySelector("nav .active").style.color = "#9CC5C7";
       document.querySelector("nav .active").style.borderBottom ="solid 2px #9CC5C7";
 
-       document.querySelector(".dropdown-content").style.backgroundColor ="transparent";
-       document.querySelector(".dropdown-content").style.color ="white";
 
       for (let i in document.querySelectorAll("nav a.underline")){
         document.querySelectorAll("nav a.underline")[i].addEventListener("mouseover",function (){
@@ -24,9 +31,9 @@ window.addEventListener('scroll',function(e){
           document.querySelectorAll("nav a.underline")[i].style.color ="#fff";
           //document.querySelectorAll(".nav a.underline")[i].style.borderBottom ="solid 2px #9CC5C7";
         });
-      };
+      }
 
-    } else if(window.scrollY > 176) {
+    } else {
       // Note: we could implement a loop to iterate over querySelectorAll matches (Nodelist)
       // document.querySelector(".site-description").style.position = "relative";
       // document.querySelector(".site-description").style.top = "0px";
@@ -39,8 +46,7 @@ window.addEventListener('scroll',function(e){
       document.querySelector("nav .active").style.color = "#000";
       document.querySelector("nav .active").style.borderBottom ="solid 2px #000";
 
-      document.querySelector(".dropdown-content").style.backgroundColor ="white";
-      document.querySelector(".dropdown-content").style.color ="black";
+
 
       for (let i in document.querySelectorAll("nav a.underline")){
         document.querySelectorAll("nav a.underline")[i].addEventListener("mouseover",function (){
@@ -52,6 +58,6 @@ window.addEventListener('scroll',function(e){
           document.querySelectorAll("nav a.underline")[i].style.color ="#fff";
           document.querySelectorAll("nav a.underline")[i].style.borderBottom ="none";
         });
-      };
-    };
+      }
+    }
   });
