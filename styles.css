@@ -25,7 +25,6 @@
        url('./fonts/source-sans-pro-v14-latin-regular.svg#SourceSansPro') format('svg'); /* Legacy iOS */
 }
 
-
 /* raleway-700 - latin */
 @font-face {
   font-family: 'Raleway';
@@ -83,7 +82,8 @@ em{
 }
 
 strong{
-	font-weight: 600;
+	font-weight: 700;
+  color: black;
 }
 
 .text-centered {
@@ -140,6 +140,7 @@ header{
 	margin-left: 3%;
 	line-height: 1;
 	transition: all 0.4s linear;
+  min-width: 334px;
 }
 
 .avatar{
@@ -171,7 +172,7 @@ nav{
 	display: flex;
 	justify-content: space-around;
 	list-style-type: none;
-
+  min-width: 710px;
 }
 
 a.underline:hover{
@@ -194,6 +195,7 @@ nav > #RDV {
   align-items: center;
   transition: all 0.2s linear;
   box-shadow: 0 10px 30px rgba(0,0,0,.3);
+  color: white;
 }
 
 nav > a#RDV:hover {
@@ -225,6 +227,7 @@ nav > a#RDV:hover {
   padding: 6px 8px;
   text-decoration: none;
   display: block;
+  font-size: 16px;
 }
 
 .dropdown-content a:hover{
@@ -263,13 +266,19 @@ nav > a#RDV:hover {
 }
 
 .contact-text, .tarifs-text {
-  height: 260px;
+  height: 222px;
   margin-top: 40px;
   /*overflow-y: scroll;*/
   display: flex;
   flex-direction: column;
   justify-content: center;
   flex-grow: 1;
+
+  padding: 16px;
+  border: solid rgba(0,0,0,0.2);
+  border-radius: 4px;
+  text-align: center;
+  min-width: 615px;
 }
 
 .contact-text {
