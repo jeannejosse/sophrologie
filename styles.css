@@ -344,6 +344,11 @@ img.avatar-large {
   margin: 0 auto;
 }
 
+img.centered {
+  display: block;
+  margin: 0 auto;
+}
+
 
 /*FOOTER*/
 footer{
@@ -426,6 +431,7 @@ footer{
   flex-wrap: wrap;
   margin-top: 20px;
   margin-bottom: 20px;
+  max-width: 1399px;
 }
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
@@ -433,8 +439,8 @@ footer{
   /*border: solid;*/
   // background-color: transparent;
   flex: 0 0 auto;
-  width: 280px;
-  height: 280px;
+  width: 260px;
+  height: 260px;
   margin: 10px;
   margin: 20px 10px;
   /*border: 1px solid black;*/
