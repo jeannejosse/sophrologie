@@ -1,3 +1,4 @@
+/********************* FONTS *********************/
 
 @font-face {
   font-family: 'Kaushan Script';
@@ -39,6 +40,8 @@
        url('./fonts/raleway-v18-latin-700.svg#Raleway') format('svg'); /* Legacy iOS */
 }
 
+/********************* MAIN STYLES *********************/
+
 h1{
 	color: #443F3F;
 	font-family: "Kaushan Script";
@@ -55,8 +58,6 @@ a{
 	color: inherit;
 }
 
-
-
 body{
 	margin: 0px;
 	color: #454F5B;
@@ -68,13 +69,23 @@ body{
 }
 
 .main-content{
-	max-width: 770px;
+	width: 780px;
 	margin : 0 auto;
 	padding-left: 12%;
 	padding-right: 12%;
 	margin-top: 32px;
 	/*margin-left: 12%;  or responsive design !
 	margin-top: 70px;*/
+}
+
+.main-content a{
+  color: #9CC5C7;
+  font-weight: 300;
+}
+
+.note{
+  font-size: 16px;
+  line-height: 1;
 }
 
 em{
@@ -100,7 +111,13 @@ img.centered {
   margin: 0 auto;
 }
 
-/*********************************************/
+@media screen and (max-width: 1024px) {
+  .main-content {
+    padding: 0;
+  }
+}
+
+/********************* HEADER & NAV BAR *********************/
 
 .overlay{
 	pointer-events: none; /* to allow clicking on underlying links */
@@ -108,6 +125,10 @@ img.centered {
 	height: 100%;
 	background-color: #000;
 	opacity: 1;
+}
+
+.overlay-small-screen {
+  display:none;
 }
 
 .header-inner{
@@ -151,9 +172,6 @@ header{
 }
 
 .avatar img{
-	/*border:solid;*/
-
-
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -178,7 +196,6 @@ header h2{
 }
 
 nav{
-	/*border:solid;*/
 	width: 100%;
   margin-right: 25px;
 	transition:all 0.4s linear;
@@ -186,6 +203,10 @@ nav{
 	justify-content: space-around;
 	list-style-type: none;
   min-width: 710px;
+}
+
+.nav-small-screen {
+  display: none;
 }
 
 a.underline:hover{
@@ -198,7 +219,7 @@ a.underline:hover{
   color: #9CC5C7;
 }
 
-nav > #RDV {
+#RDV {
   background-color: #0596de;
   width: 132px;
   height: 40px;
@@ -211,12 +232,12 @@ nav > #RDV {
   color: white;
 }
 
-nav > a#RDV:hover {
+a#RDV:hover {
   border-bottom: none;
   background-color: #13689E;
 }
 
-/*Dropdown menu*/
+/* Dropdown menu */
 
 .dropdown {
   position: relative;
@@ -254,25 +275,77 @@ nav > a#RDV:hover {
 	/*border: solid 2px #9CC5C7;*/
 }
 
-/*.dropdown-content a:hover {background-color: #@ddd;}*/
-
 .dropdown:hover .dropdown-content {display: block;}
 
-/*.dropdown:hover .dropdown-menu {background-color: #3e8e41;}*/
-/*...*/
 
+@media screen and (max-width: 1100px) {
+  nav {
+    font-size: 18px;
+    min-width: 664px;
+  }
 
+  nav > a#RDV {
+    height: 32px;
+  }
 
-
-.note{
-	font-size: 16px;
-	line-height: 1;
+  .site-description {
+    min-width: 300px;
+  }
 }
 
-.main-content a{
-	color: #9CC5C7;
-	font-weight: 300;
+@media screen and (max-width: 1024px) {
+  .overlay {
+    display: none;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .overlay-small-screen {
+    display: block;
+    height: 100px;
+    /*background-color: #9CC5C7;*/
+  }
+
+  header {
+    background-color: #9CC5C7;
+    margin-top: 0;
+    top: 0;
+  }
+
+  .nav-small-screen {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .nav-small-screen img {
+    vertical-align: middle;
+  }
+
+  .nav-small-screen .dropdown-content {
+    background-color: black;
+    left: -150px;
+  }
+
+  .dropdown-content {
+    font-size: 16px;
+  }
+
+  .dropdown-content .sub-menu {
+    display: none;
+    background-color: grey;
+    font-style: italic;
+  }
+
+  .menu-arrow {
+    font-size: 12px;
+  }
 }
+
+/********************* INDEX *********************/
 
 .contact, .tarifs{
   width: 90%;
@@ -282,7 +355,7 @@ nav > a#RDV:hover {
   align-items: center;
 }
 
-.contact-text, .tarifs-text {
+.contact-text, .tarif-text {
   height: 222px;
   margin-top: 40px;
   /*overflow-y: scroll;*/
@@ -302,16 +375,16 @@ nav > a#RDV:hover {
   margin-right: 32px;
 }
 
-.tarifs-text {
+.tarif-text {
   margin-left: 32px;
 }
 
-.contact-text > h1, .tarifs-text > h1 {
+.contact-text > h1, .tarif-text > h1 {
   margin-top: 0;
   line-height: 0.8;
 }
 
-.contact-text > p, .tarifs-text > p, .infos-covid  {
+.contact-text > p, .tarif-text > p, .infos-covid  {
   font-size: 16px;
 }
 
@@ -325,7 +398,7 @@ img.photo-cab {
 .infos-covid {
   border: solid orange;
   width: 480px;
-  margin: 0 auto;
+  margin: 48px auto 0 auto;
   padding: 10px 0;
   text-align: center;
   /*color: white;*/
@@ -344,84 +417,50 @@ img.avatar-large {
   margin: 0 auto;
 }
 
-img.centered {
-  display: block;
-  margin: 0 auto;
+.photos-small-screen {
+  display: none;
 }
 
+@media screen and (max-width: 1200px) {
+  .photo-large-screen {
+    display: none;
+  }
 
-/*FOOTER*/
-footer{
-	width: 100%;
-	height: 80px;
-	color: #000;
-	background-color: #464F5B;
-	display: flex;
-  /*flex-direction: column;*/
-  justify-content: center;
-	align-items: center;
+  .contact-text {
+    margin-right: 0;
+    margin-top: 16px;
+    border: none;
+  }
+
+  .tarif-text {
+    margin-left: 0;
+    margin-top: 16px;
+    border: none;
+  }
+
+  .photos-small-screen {
+    display: flex;
+    justify-content: space-around;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  .photo-small-screen {
+    width: 348px;
+  }
+
+  img.photo-cab {
+    margin-top: 0;
+  }
+
+  .infos-covid {
+    margin: 0 auto;
+  }
+
 }
 
-.doctolib {
-  width: 132px;
-  padding-top: 4px;
-}
+/********************* FLIP CARDS *********************/
 
-.linkedin {
-  height: 32px;
-  margin-right: 24px;
-}
-
-.facebook {
-  height: 32px;
-  margin-right: 24px;
-}
-
-.instagram {
-  height: 37px;
-  margin-right: 24px;
-}
-
-
-/*.doctolib:hover {
-  border-radius: 32px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.3);
-}
-*/
-
-.fab{
-  color: white;
-  font-size: 32px;
-}
-
-.fa-facebook-square:hover {
-  color: black;
-}
-
-.fa-instagram-square:hover {
-  color: black;
-}
-
-.fa-linkedin:hover {
-  color: black;
-}
-
-.list-inline > li {
-  display: inline-block;
-  padding: 0px 20px;
-}
-
-.list-inline {
-  list-style: none;
-  padding-left: 0px;
-}
-
-/*FOOTER*/
-
-
-
-
-/*FLIP CARDS*/
 .flip-cards-container {
   /*border: solid black;*/
   /*width: 100%;*/
@@ -559,4 +598,63 @@ footer{
   background-image: url("flip-cards-images/developpement-personnel.png");
   background-size: contain;
 }
-/*FLIP CARDS*/
+
+/********************* FOOTER *********************/
+
+footer {
+  width: 100%;
+  height: 80px;
+  color: #000;
+  background-color: #464F5B;
+  display: flex;
+  /*flex-direction: column;*/
+  justify-content: center;
+  align-items: center;
+}
+
+.doctolib {
+  width: 132px;
+  padding-top: 4px;
+}
+
+.linkedin {
+  height: 32px;
+  margin-right: 24px;
+}
+
+.facebook {
+  height: 32px;
+  margin-right: 24px;
+}
+
+.instagram {
+  height: 37px;
+  margin-right: 24px;
+}
+
+.fab{
+  color: white;
+  font-size: 32px;
+}
+
+.fa-facebook-square:hover {
+  color: black;
+}
+
+.fa-instagram-square:hover {
+  color: black;
+}
+
+.fa-linkedin:hover {
+  color: black;
+}
+
+.list-inline > li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.list-inline {
+  list-style: none;
+  padding-left: 0px;
+}

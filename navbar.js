@@ -1,4 +1,5 @@
 window.addEventListener('scroll',function(e){
+  if (window.innerWidth > 1024) {
     if(window.scrollY < 88) {
       document.querySelector(".dropdown-content").style.backgroundColor ="transparent";
       document.querySelector(".dropdown-content").style.color ="white";
@@ -60,4 +61,20 @@ window.addEventListener('scroll',function(e){
         });
       }
     }
-  });
+  } else {
+      document.querySelector("header").style.background = "#9CC5C7";
+      document.querySelector("header").style.marginTop = "0px";
+
+      document.querySelector(".sub-menu-trigger").addEventListener("click", function() {
+      document.querySelectorAll(".sub-menu").forEach(subMenu => {
+        if (subMenu.style.display === "none") {
+          subMenu.style.display = "block";
+          document.querySelector(".menu-arrow").innerHTML = "▲"
+        } else {
+          subMenu.style.display = "none";
+          document.querySelector(".menu-arrow").innerHTML = "▼"
+        }
+      });
+    });
+  }
+});
