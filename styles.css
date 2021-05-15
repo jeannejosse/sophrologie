@@ -459,6 +459,40 @@ img.avatar-large {
 
 }
 
+@media screen and (max-width: 725px) {
+  .photos-small-screen {
+    flex-direction: column;
+    align-items: center;
+    height: 560px;
+  }
+}
+
+@media all and (max-device-width: 480px) {
+
+  .index-main-content {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .photos-small-screen {
+    flex-direction: column;
+    align-items: center;
+    height: 560px;
+  }
+
+  .contact-text, .tarif-text {
+    /* smallest smartphones */
+    min-width: 320px;
+    /*width: 100%;*/
+    margin-top: 48px;
+  }
+
+  .infos-covid {
+    width: 100%;
+  }
+
+}
+
 /********************* FLIP CARDS *********************/
 
 .flip-cards-container {
