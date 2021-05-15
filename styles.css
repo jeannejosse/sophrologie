@@ -277,6 +277,10 @@ a#RDV:hover {
 
 .dropdown:hover .dropdown-content {display: block;}
 
+.smartphone {
+  display: none;
+}
+
 
 @media screen and (max-width: 1100px) {
   nav {
@@ -344,6 +348,74 @@ a#RDV:hover {
     font-size: 12px;
   }
 }
+
+@media all and (max-device-width: 480px) {
+  .smartphone {
+    display: inline-block;
+  }
+
+  .large-screen {
+    display: none;
+  }
+
+  header {
+    height: 160px;
+    flex-direction: column;
+  }
+
+  .overlay-small-screen {
+    height: 200px;
+  }
+
+  .site-description img {
+    display: none;
+  }
+
+  .site-description {
+    text-align: center;
+    position: relative;
+    top: -16px;
+  }
+
+  header h2 {
+    font-size: 20px;
+  }
+
+  #RDV {
+    /*margin-top: -32px;*/
+  }
+
+  .nav-small-screen img {
+    /*margin-top: 8px;*/
+  }
+  .nav-small-screen {
+    margin-bottom: 16px;
+    position: relative;
+    top: -32px;
+    width: 60%;
+    /*flex-direction: column;*/
+  }
+
+  .contact-text a, .contact-text p, .tarif-text p {
+    font-size: 16px !important;
+    margin-bottom: 16px;
+  }
+
+  .tel {
+    background-color: #0596de;
+    width: 132px;
+    height: 40px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s linear;
+    box-shadow: 0 10px 30px rgba(0,0,0,.3);
+    color: white;
+    margin: 16px auto;
+  }
+}
+
 
 /********************* INDEX *********************/
 
@@ -469,26 +541,34 @@ img.avatar-large {
 
 @media all and (max-device-width: 480px) {
 
+  html {
+    width: 100%;
+  }
+
   .index-main-content {
-    max-width: 90%;
-    margin: 0 auto;
+    width: 100%;
+    /*max-width: 90%;*/
+    /*margin: 0 auto;*/
   }
 
   .photos-small-screen {
     flex-direction: column;
     align-items: center;
     height: 560px;
+    /*width: 100%;*/
+    margin-top: 48px;
   }
 
   .contact-text, .tarif-text {
     /* smallest smartphones */
-    min-width: 320px;
+    min-width: 0px;
     /*width: 100%;*/
     margin-top: 48px;
   }
 
   .infos-covid {
-    width: 100%;
+    /*width: 100%;*/
+    width: 90%;
   }
 
 }
