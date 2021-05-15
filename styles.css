@@ -373,7 +373,7 @@ a#RDV:hover {
   }
 
   .overlay-small-screen {
-    height: 200px;
+    height: 160px;
   }
 
   .site-description img {
@@ -403,11 +403,6 @@ a#RDV:hover {
     top: -32px;
     width: 60%;
     /*flex-direction: column;*/
-  }
-
-  .contact-text a, .contact-text p, .tarif-text p {
-    font-size: 16px !important;
-    margin-bottom: 16px;
   }
 
   .tel {
@@ -565,14 +560,18 @@ img.avatar-large {
     align-items: center;
     height: 560px;
     /*width: 100%;*/
-    margin-top: 48px;
   }
 
   .contact-text, .tarif-text {
     /* smallest smartphones */
     min-width: 0px;
     /*width: 100%;*/
-    margin-top: 48px;
+    height: auto !important;
+  }
+
+  .contact-text a, .contact-text p, .tarif-text p {
+    font-size: 16px !important;
+    margin-bottom: 16px;
   }
 
   .infos-covid {
