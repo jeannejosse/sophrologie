@@ -384,6 +384,7 @@ a#RDV:hover {
     text-align: center;
     position: relative;
     top: -16px;
+    margin-left: 0;
   }
 
   header h2 {
@@ -401,7 +402,7 @@ a#RDV:hover {
     margin-bottom: 16px;
     position: relative;
     top: -32px;
-    width: 60%;
+    width: 70%;
     /*flex-direction: column;*/
   }
 
