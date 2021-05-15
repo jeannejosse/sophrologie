@@ -219,6 +219,10 @@ a.underline:hover{
   color: #9CC5C7;
 }
 
+.active-dropdown {
+  color: #9CC5C7;
+}
+
 #RDV {
   background-color: #0596de;
   width: 132px;
@@ -258,6 +262,7 @@ a#RDV:hover {
   left: -46px;
   text-align: center;
   border-radius: 4px;
+  padding-top: 12px;
 }
 
 .dropdown-content a {
@@ -294,6 +299,10 @@ a#RDV:hover {
 
   .site-description {
     min-width: 300px;
+  }
+
+  .dropdown-content {
+    padding-top: 0;
   }
 }
 
