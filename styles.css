@@ -205,9 +205,9 @@ nav{
   min-width: 710px;
 }
 
-/*.nav-small-screen {
+.nav-small-screen {
   display: none;
-}*/
+}
 
 .nav-smarthpone {
   display: none;
