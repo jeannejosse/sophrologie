@@ -209,6 +209,10 @@ nav{
   display: none;
 }
 
+.nav-smarthpone {
+  display: none;
+}
+
 a.underline:hover{
 	border-bottom: solid 2px #9CC5C7;
 	color: #9CC5C7;
@@ -358,6 +362,7 @@ a#RDV:hover {
   }
 }
 
+/* For smartphone devices*/
 @media all and (max-device-width: 480px) {
   .smartphone {
     display: inline-block;
@@ -368,42 +373,56 @@ a#RDV:hover {
   }
 
   header {
-    height: 160px;
+    height: 104px;
     flex-direction: column;
   }
 
   .overlay-small-screen {
-    height: 160px;
+    height: 104px;
   }
 
   .site-description img {
-    display: none;
+    /*display: none;*/
   }
 
   .site-description {
-    text-align: center;
-    position: relative;
-    top: -16px;
+   /* text-align: center;*/
+/*    position: relative;*/
+/*    top: -16px;*/
     margin-left: 0;
+    max-width: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .avatar {
+    /*position: relative;*/
+    top: 0;
+    right: 0;
+    padding-left: 0;
   }
 
   header h2 {
-    font-size: 20px;
+    font-size: 12px;
   }
 
   #RDV {
     /*margin-top: -32px;*/
   }
 
-  .nav-small-screen img {
-    /*margin-top: 8px;*/
-  }
+
   .nav-small-screen {
-    margin-bottom: 16px;
+    display: none;
+ /*   margin-bottom: 16px;
     position: relative;
     top: -32px;
-    width: 70%;
-    /*flex-direction: column;*/
+    width: 70%;*/
+
+  }
+
+  .nav-smarthpone {
+    display: block;
   }
 
   .tel {
@@ -559,7 +578,7 @@ img.avatar-large {
   .photos-small-screen {
     flex-direction: column;
     align-items: center;
-    height: 560px;
+    height: 280px;
     /*width: 100%;*/
   }
 
@@ -571,8 +590,16 @@ img.avatar-large {
   }
 
   .contact-text a, .contact-text p, .tarif-text p {
-    font-size: 16px !important;
+    /*font-size: 16px !important;*/
     margin-bottom: 16px;
+  }
+
+  .tarif-text .p-smartphone {
+    font-size: 12px ;
+  }
+
+  .photo-small-screen1 {
+    display: none;
   }
 
   .infos-covid {
