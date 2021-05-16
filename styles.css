@@ -213,10 +213,21 @@ nav{
   display: none;
 }
 
-a.underline:hover{
+/*a.underline:hover{
   border-bottom: solid 2px #9CC5C7;
   color: #9CC5C7;
+}*/
+
+a.underline:after {
+  display:block;
+  content: '';
+  height: 4px;
+  border-bottom: solid 2px #9CC5C7;
+  color: #9CC5C7;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
 }
+a.underline:hover:after { transform: scaleX(1); }
 
 .active {
   border-bottom: solid 2px #9CC5C7;
