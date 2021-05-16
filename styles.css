@@ -43,39 +43,39 @@
 /********************* MAIN STYLES *********************/
 
 h1{
-	color: #443F3F;
-	font-family: "Kaushan Script";
-	font-size: 36px;
+  color: #443F3F;
+  font-family: "Kaushan Script";
+  font-size: 36px;
 }
 
 h2{
-	font-size: 20px;
-	font-family: 'Raleway';
+  font-size: 20px;
+  font-family: 'Raleway';
 }
 
 a{
-	text-decoration: none;
-	color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 body{
-	margin: 0px;
-	color: #454F5B;
-	font-family: 'Source Sans Pro', sans serif;
-	font-size: 20px;
-	line-height: 1.7;
-	background-color: #fff;
-	text-align: justify;
+  margin: 0px;
+  color: #454F5B;
+  font-family: 'Source Sans Pro', sans serif;
+  font-size: 20px;
+  line-height: 1.7;
+  background-color: #fff;
+  text-align: justify;
 }
 
 .main-content{
-	width: 780px;
-	margin : 0 auto;
-	padding-left: 12%;
-	padding-right: 12%;
-	margin-top: 32px;
-	/*margin-left: 12%;  or responsive design !
-	margin-top: 70px;*/
+  width: 780px;
+  margin : 0 auto;
+  padding-left: 12%;
+  padding-right: 12%;
+  margin-top: 32px;
+  /*margin-left: 12%;  or responsive design !
+  margin-top: 70px;*/
 }
 
 .main-content a{
@@ -89,11 +89,11 @@ body{
 }
 
 em{
-	font-style: italic;
+  font-style: italic;
 }
 
 strong{
-	font-weight: 700;
+  font-weight: 700;
   color: black;
 }
 
@@ -120,11 +120,11 @@ img.centered {
 /********************* HEADER & NAV BAR *********************/
 
 .overlay{
-	pointer-events: none; /* to allow clicking on underlying links */
-	width: 100%;
-	height: 100%;
-	background-color: #000;
-	opacity: 1;
+  pointer-events: none; /* to allow clicking on underlying links */
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 1;
 }
 
 .overlay-small-screen {
@@ -132,35 +132,35 @@ img.centered {
 }
 
 .header-inner{
-	max-width: 100%;
-	height: 300px;
-	object-fit: cover;
-	vertical-align: middle;
-	opacity: 0.5;
+  max-width: 100%;
+  height: 300px;
+  object-fit: cover;
+  vertical-align: middle;
+  opacity: 0.5;
 }
 
 header{
-	width: 100%;
-	height: 100px;
-	position: fixed;
-	color: #fff;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	/*background-color: #A6CBCC;*/
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*background-color: #A6CBCC;*/
   transition: all 0.4s linear;
-	/*transition: background-color 1s linear;*/
-	z-index: 1;
+  /*transition: background-color 1s linear;*/
+  z-index: 1;
 }
 
 .site-description{
-	/*border:solid;*/
-	width: 100%;
-	max-width: 350px;
-	display: flex;
-	margin-left: 3%;
-	line-height: 1;
-	transition: all 0.4s linear;
+  /*border:solid;*/
+  width: 100%;
+  max-width: 350px;
+  display: flex;
+  margin-left: 3%;
+  line-height: 1;
+  transition: all 0.4s linear;
   min-width: 334px;
 }
 
@@ -186,22 +186,22 @@ header {
 }
 
 header h1{
-	color: #fff;
+  color: #fff;
 }
 
 header h2{
-	position: relative;
+  position: relative;
   font-size: 12px;
-	bottom: 16px;
+  bottom: 16px;
 }
 
 nav{
-	width: 100%;
+  width: 100%;
   margin-right: 25px;
-	transition:all 0.4s linear;
-	display: flex;
-	justify-content: space-around;
-	list-style-type: none;
+  transition:all 0.4s linear;
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
   min-width: 710px;
 }
 
@@ -214,8 +214,8 @@ nav{
 }
 
 a.underline:hover{
-	border-bottom: solid 2px #9CC5C7;
-	color: #9CC5C7;
+  border-bottom: solid 2px #9CC5C7;
+  color: #9CC5C7;
 }
 
 .active {
@@ -278,10 +278,10 @@ a#RDV:hover {
 }
 
 .dropdown-content a:hover{
-	/*border-bottom: none !important;*/
-	color: #9CC5C7 ;
-	/*background-color: black;*/
-	/*border: solid 2px #9CC5C7;*/
+  /*border-bottom: none !important;*/
+  color: #9CC5C7 ;
+  /*background-color: black;*/
+  /*border: solid 2px #9CC5C7;*/
 }
 
 .dropdown:hover .dropdown-content {display: block;}
