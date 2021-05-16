@@ -213,10 +213,9 @@ nav{
   display: none;
 }
 
-/*a.underline:hover{
-  border-bottom: solid 2px #9CC5C7;
+a.underline:hover{
   color: #9CC5C7;
-}*/
+}
 
 a.underline:after {
   display:block;
@@ -231,7 +230,6 @@ a.underline:hover:after { transform: scaleX(1); }
 
 .active {
   border-bottom: solid 2px #9CC5C7;
-  color: #9CC5C7;
 }
 
 .active-dropdown {
