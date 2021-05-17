@@ -423,13 +423,21 @@ a#RDV:hover {
     font-size: 16px;
   }
 
+  .sub-menu-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .dropdown-content-small-screen .sub-menu {
-    display: none;
-    background-color: grey;
+    /*display: none;*/
+    display: block;
+    /*background-color: grey;*/
     font-style: italic;
   }
 
   .menu-arrow {
+    display: none;
     font-size: 12px;
   }
 }
