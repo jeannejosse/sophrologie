@@ -209,7 +209,7 @@ nav{
   display: none;
 }
 
-.nav-smarthpone {
+.nav-smartphone {
   display: none;
 }
 
@@ -300,6 +300,60 @@ a#RDV:hover {
 }
 
 
+
+/*Menu burger*/
+.menu-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+  /* border: 3px solid #fff; */
+}
+.menu-btn__burger {
+  width: 40px;
+  height: 6px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255,101,47,.2);
+  transition: all .5s ease-in-out;
+}
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 6px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255,101,47,.2);
+  transition: all .5s ease-in-out;
+}
+.menu-btn__burger::before {
+  transform: translateY(-16px);
+}
+.menu-btn__burger::after {
+  transform: translateY(16px);
+}
+/* ANIMATION */
+.menu-btn.open .menu-btn__burger {
+  transform: translateX(50px);
+  background: transparent;
+  box-shadow: none;
+}
+.menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(-35px, 35px);
+}
+.menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(-35px, -35px);
+}
+
+
+
+
 @media screen and (max-width: 1100px) {
   nav {
     font-size: 18px;
@@ -347,20 +401,29 @@ a#RDV:hover {
     align-items: center;
   }
 
-  .nav-small-screen img {
+/*  .nav-small-screen img {
     vertical-align: middle;
-  }
+  }*/
 
-  .nav-small-screen .dropdown-content {
+  .nav-small-screen .dropdown-content-small-screen {
     background-color: black;
-    left: -150px;
+    position: fixed;
+    /*left: -133px;
+    top: 82px;*/
+    top: 100px;
+    left: 0;
+    transition: all .5s ease-in-out;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
   }
 
-  .dropdown-content {
+  .dropdown-content-small-screen {
+    display: block;
     font-size: 16px;
   }
 
-  .dropdown-content .sub-menu {
+  .dropdown-content-small-screen .sub-menu {
     display: none;
     background-color: grey;
     font-style: italic;
@@ -413,7 +476,7 @@ a#RDV:hover {
   }
 
   header h2 {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   #RDV {
@@ -430,23 +493,24 @@ a#RDV:hover {
 
   }
 
-  .nav-smarthpone {
+  .nav-smartphone {
     display: block;
   }
 
-  .tel {
-    background-color: #0596de;
-    width: 132px;
-    height: 40px;
-    border-radius: 6px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.2s linear;
-    box-shadow: 0 10px 30px rgba(0,0,0,.3);
-    color: white;
-    margin: 16px auto;
+  .nav-smartphone .dropdown-content-smartphone {
+    background-color: black;
+    position: fixed;
+    /*left: -133px;
+    top: 82px;*/
+    top: 104px;
+    left: 0;
+    transition: all .5s ease-in-out;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
   }
+
+
 }
 
 
@@ -601,6 +665,20 @@ img.avatar-large {
   .contact-text a, .contact-text p, .tarif-text p {
     /*font-size: 16px !important;*/
     margin-bottom: 16px;
+  }
+
+  .tel {
+    background-color: #0596de;
+    width: 132px;
+    height: 40px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s linear;
+    box-shadow: 0 10px 30px rgba(0,0,0,.3);
+    color: white;
+    margin: 16px auto;
   }
 
   .tarif-text .p-smartphone {

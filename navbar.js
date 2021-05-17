@@ -78,3 +78,54 @@ window.addEventListener('scroll',function(e){
     });
   }
 });
+
+
+const menuBtnSmallScreen = document.querySelector('.menu-btn-small-screen');
+let menuOpenSmallScreen = false;
+menuBtnSmallScreen.addEventListener('click', () => {
+  if(!menuOpenSmallScreen) {
+    menuBtnSmallScreen.classList.add('open');
+    menuOpenSmallScreen = true;
+    document.querySelector(".dropdown-content-small-screen").style.height = "160px";
+    console.log('ok')
+  } else {
+    menuBtnSmallScreen.classList.remove('open');
+    menuOpenSmallScreen = false;
+    document.querySelector(".dropdown-content-small-screen").style.height = "0";
+  }
+});
+
+document.body.addEventListener('click', (e) => {
+  if(['menu-btn', 'menu-btn__burger'].some(i => Array.from(e.target.classList).includes(i))) {
+    return;
+  } else if(menuOpenSmallScreen) {
+    menuBtnSmallScreen.classList.remove('open');
+    menuOpenSmallScreen = false;
+    document.querySelector(".dropdown-content-small-screen").style.height = "0";
+  }
+});
+
+
+const menuBtnSmartphone = document.querySelector('.menu-btn-smartphone');
+let menuOpenSmartphone = false;
+menuBtnSmartphone.addEventListener('click', () => {
+  if(!menuOpenSmartphone) {
+    menuBtnSmartphone.classList.add('open');
+    menuOpenSmartphone = true;
+    document.querySelector(".dropdown-content-smartphone").style.height = "120px";
+  } else {
+    menuBtnSmartphone.classList.remove('open');
+    menuOpenSmartphone = false;
+    document.querySelector(".dropdown-content-smartphone").style.height = "0";
+  }
+});
+
+document.body.addEventListener('click', (e) => {
+  if(['menu-btn', 'menu-btn__burger'].some(i => Array.from(e.target.classList).includes(i))) {
+    return;
+  } else if(menuOpenSmartphone) {
+    menuBtnSmartphone.classList.remove('open');
+    menuOpenSmartphone = false;
+    document.querySelector(".dropdown-content-smartphone").style.height = "0";
+  }
+});
