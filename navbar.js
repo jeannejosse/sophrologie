@@ -112,7 +112,10 @@ menuBtnSmartphone.addEventListener('click', () => {
   if(!menuOpenSmartphone) {
     menuBtnSmartphone.classList.add('open');
     menuOpenSmartphone = true;
-    document.querySelector(".dropdown-content-smartphone").style.height = "120px";
+    document.querySelector(".dropdown-content-smartphone").style.height = "144px";
+
+    // menuBtnSmartphone.querySelector(".menu-btn__burger::before").style.transform = "translateY(0px)";
+
   } else {
     menuBtnSmartphone.classList.remove('open');
     menuOpenSmartphone = false;
@@ -127,5 +130,30 @@ document.body.addEventListener('click', (e) => {
     menuBtnSmartphone.classList.remove('open');
     menuOpenSmartphone = false;
     document.querySelector(".dropdown-content-smartphone").style.height = "0";
+  }
+});
+
+// Appear animation
+var scrollBefore = 0;
+document.addEventListener('scroll', (e) => {
+  const scrolled = window.scrollY;
+  if (scrolled > scrollBefore) {
+
+    scrollBefore = scrolled;
+
+    document.querySelectorAll(".appear").forEach((element) => {
+      console.log(element);
+      const elementBottomFromWindowBottom = element.getBoundingClientRect().bottom - window.innerHeight;
+      const elementTopFromWindowBottom = element.getBoundingClientRect().top - window.innerHeight;
+      console.log(elementBottomFromWindowBottom);
+      if (elementBottomFromWindowBottom > -300 && elementTopFromWindowBottom > 0) {
+        element.style.visibility = "hidden";
+      } else {
+        element.style.visibility = "visible";
+        element.classList.add("bounce");
+      }
+    });
+  } else {
+    // do nothing...
   }
 });
