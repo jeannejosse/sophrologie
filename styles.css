@@ -119,10 +119,10 @@ img.centered {
 
 .bounce {
     position: relative;
-    -webkit-animation: bounce .7s linear;
-    -moz-animation: bounce .7s linear;
-    -o-animation: bounce .7s linear;
-    animation: bounce .7s linear;
+    -webkit-animation: bounce .7s ease-in-out;
+    -moz-animation: bounce .7s ease-in-out;
+    -o-animation: bounce .7s ease-in-out;
+    animation: bounce .7s ease-in-out;
 }
 
   /*@-webkit-keyframes bounce {
@@ -151,21 +151,25 @@ img.centered {
 
   @-webkit-keyframes bounce {
     0%       { bottom:-30px; }
+    75%      { bottom:5px; }
     100%     {bottom:0px;}
   }
 
    @-moz-keyframes bounce {
     0%       { bottom:-30px; }
+    75%      { bottom:5px; }
     100%     {bottom:0px;}
   }
 
    @-o-keyframes bounce {
     0%       { bottom:-30px; }
+    75%      { bottom:5px; }
     100%     {bottom:0px;}
   }
 
    @keyframes bounce {
     0%       { bottom:-30px; }
+    75%      { bottom:5px; }
     100%     {bottom:0px;}
   }
 
@@ -327,7 +331,7 @@ a#RDV:hover {
   left: -46px;
   text-align: center;
   border-radius: 4px;
-  padding-top: 12px;
+  margin-top: 12px;
 }
 
 .dropdown-content a {
@@ -469,6 +473,10 @@ a#RDV:hover {
     overflow: hidden;
   }
 
+  .dropdown-content {
+    margin-top: 0;
+  }
+
   .dropdown-content-small-screen {
     display: block;
     font-size: 16px;
@@ -568,11 +576,13 @@ a#RDV:hover {
     height: 0;
     overflow: hidden;
   }
-
-
 }
 
-
+@media all and (max-device-width: 336px) {
+  body {
+    min-width: 336px;
+  }
+}
 /********************* INDEX *********************/
 
 .contact, .tarifs{
@@ -692,6 +702,11 @@ img.avatar-large {
     flex-direction: column;
     align-items: center;
     height: 560px;
+    min-width: 725px;
+  }
+
+  .photos-small-screen img {
+    width: 346px;
   }
 }
 
@@ -708,6 +723,7 @@ img.avatar-large {
   }
 
   .photos-small-screen {
+    min-width: 0px;
     flex-direction: column;
     align-items: center;
     height: 280px;
@@ -772,6 +788,7 @@ img.avatar-large {
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
   /*border: solid;*/
+  cursor: pointer;
   // background-color: transparent;
   flex: 0 0 auto;
   width: 260px;
@@ -800,7 +817,13 @@ img.avatar-large {
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
 .flip-card:hover .flip-card-inner {
+  /*transform: rotateY(180deg);*/
+  transform: scale(1.1);
+}
+
+.flip-card.flipped .flip-card-inner {
   transform: rotateY(180deg);
+  /*transform: scale(1.1);*/
 }
 
 /* Position the front and back side */

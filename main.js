@@ -1,14 +1,14 @@
 window.addEventListener('scroll',function(e){
   if (window.innerWidth > 1024) {
-    if(window.scrollY < 88) {
-      document.querySelector(".dropdown-content").style.backgroundColor ="transparent";
-      document.querySelector(".dropdown-content").style.color ="white";
-
+    if(window.scrollY < 72) {
+      document.querySelector(".dropdown-content-large-screen").style.backgroundColor ="transparent";
+      document.querySelector(".dropdown-content-large-screen").style.color ="white";
+      // console.log('nok');
     } else {
-      document.querySelector(".dropdown-content").style.backgroundColor ="white";
-      document.querySelector(".dropdown-content").style.color ="black";
+      console.log(document.querySelector(".dropdown-content"));
+      document.querySelector(".dropdown-content-large-screen").style.backgroundColor ="white";
+      document.querySelector(".dropdown-content-large-screen").style.color ="black";
     }
-
     if(window.scrollY < 176) {
       // document.querySelector(".site-description").style.position = "relative";
       // document.querySelector(".site-description").style.top = "30px";
@@ -87,7 +87,7 @@ menuBtnSmallScreen.addEventListener('click', () => {
     menuBtnSmallScreen.classList.add('open');
     menuOpenSmallScreen = true;
     document.querySelector(".dropdown-content-small-screen").style.height = "200px";
-    console.log('ok')
+    // console.log('ok')
   } else {
     menuBtnSmallScreen.classList.remove('open');
     menuOpenSmallScreen = false;
@@ -134,19 +134,16 @@ document.body.addEventListener('click', (e) => {
 });
 
 // Appear animation
-var scrollBefore = 0;
 
-// console.log(window.innerHeight);
 // Remove the class "appear" from elements that are already visible when the page loads
 document.querySelectorAll(".appear").forEach((element) => {
   const elementTopFromWindowBottom = window.innerHeight - element.getBoundingClientRect().top;
-  // console.log(element);
-  // console.log(elementTopFromWindowBottom);
   if (elementTopFromWindowBottom > 0) {
     element.classList.remove("appear");
   }
 });
 
+var scrollBefore = 0;
 document.addEventListener('scroll', (e) => {
   const scrolled = window.scrollY;
   if (scrolled > scrollBefore) {
@@ -158,13 +155,26 @@ document.addEventListener('scroll', (e) => {
       const elementBottomFromWindowBottom = element.getBoundingClientRect().bottom - window.innerHeight;
 
       // console.log(elementBottomFromWindowBottom);
-      if (elementBottomFromWindowBottom > -80 && window.innerHeight > 500) {
+      if (elementBottomFromWindowBottom > -80 && window.innerHeight > 500 && !element.classList.contains('bounce')) {
         element.style.visibility = "hidden";
-        element.classList.remove("bounce");
+        // element.classList.remove("bounce");
       } else {
         element.style.visibility = "visible";
         element.classList.add("bounce");
       }
     });
   }
+});
+
+const cards = document.querySelectorAll(".flip-card");
+cards.forEach((card) => {
+  card.addEventListener('click', (e) => {
+    // card.querySelector(".flip-card-inner").style.transform="rotateY(180deg)";
+    if (card.classList.contains("flipped")) {
+      card.classList.remove("flipped");
+    } else {
+      cards.forEach(card => card.classList.remove("flipped"));
+      card.classList.add("flipped");
+    }
+  });
 });
