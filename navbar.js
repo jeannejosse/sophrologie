@@ -135,6 +135,18 @@ document.body.addEventListener('click', (e) => {
 
 // Appear animation
 var scrollBefore = 0;
+
+console.log(window.innerHeight);
+// Remove the class "appear" from elements that are already visible when the page loads
+document.querySelectorAll(".appear").forEach((element) => {
+  const elementTopFromWindowBottom = window.innerHeight - element.getBoundingClientRect().top;
+  console.log(element);
+  console.log(elementTopFromWindowBottom);
+  if (elementTopFromWindowBottom > 0) {
+    element.classList.remove("appear");
+  }
+});
+
 document.addEventListener('scroll', (e) => {
   const scrolled = window.scrollY;
   if (scrolled > scrollBefore) {
@@ -142,18 +154,16 @@ document.addEventListener('scroll', (e) => {
     scrollBefore = scrolled;
 
     document.querySelectorAll(".appear").forEach((element) => {
-      console.log(element);
+      // console.log(element);
       const elementBottomFromWindowBottom = element.getBoundingClientRect().bottom - window.innerHeight;
-      const elementTopFromWindowBottom = element.getBoundingClientRect().top - window.innerHeight;
-      console.log(elementBottomFromWindowBottom);
-      if (elementBottomFromWindowBottom > -300 && elementTopFromWindowBottom > 0) {
+
+      // console.log(elementBottomFromWindowBottom);
+      if (elementBottomFromWindowBottom > -80 && window.innerHeight > 500) {
         element.style.visibility = "hidden";
       } else {
         element.style.visibility = "visible";
         element.classList.add("bounce");
       }
     });
-  } else {
-    // do nothing...
   }
 });
