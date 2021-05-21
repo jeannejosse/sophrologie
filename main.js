@@ -9,11 +9,13 @@ window.addEventListener('scroll',function(e){
   if (window.innerWidth > 1024) {
     if(window.scrollY < 72) {
       document.querySelector(".dropdown-content-large-screen").style.backgroundColor ="transparent";
+      document.querySelector(".dropdown-content-large-screen").style.boxShadow ="none";
       document.querySelector(".dropdown-content-large-screen").style.color ="white";
 
     } else {
       // console.log(document.querySelector(".dropdown-content"));
       document.querySelector(".dropdown-content-large-screen").style.backgroundColor ="white";
+      document.querySelector(".dropdown-content-large-screen").style.boxShadow ="0px 8px 16px 0px rgba(0,0,0,0.2)";
       document.querySelector(".dropdown-content-large-screen").style.color ="black";
     }
     if(window.scrollY < 176) {
@@ -108,9 +110,10 @@ document.addEventListener('scroll', (e) => {
     document.querySelectorAll(".appear").forEach((element) => {
       // console.log(element);
       const elementBottomFromWindowBottom = element.getBoundingClientRect().bottom - window.innerHeight;
+      const elementTopFromWindowBottom = window.innerHeight - element.getBoundingClientRect().top;
 
       // console.log(elementBottomFromWindowBottom);
-      if (elementBottomFromWindowBottom > -80 && window.innerHeight > 500 && !element.classList.contains('bounce')) {
+      if (elementTopFromWindowBottom < 160 && window.innerHeight > 500 && !element.classList.contains('bounce')) {
         element.style.visibility = "hidden";
         // element.classList.remove("bounce");
       } else {

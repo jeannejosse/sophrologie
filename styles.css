@@ -372,6 +372,10 @@ a#RDV:hover {
   /*margin-top: 12px;*/
 }
 
+.dropdown-content-large-screen {
+  box-shadow: none;
+}
+
 .spacing {
   height: 12px;
   background-color: transparent;
