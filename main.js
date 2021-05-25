@@ -96,7 +96,7 @@ document.body.addEventListener('click', (e) => {
 // Remove the class "appear" from elements that are already visible when the page loads
 document.querySelectorAll(".appear").forEach((element) => {
   const elementTopFromWindowBottom = window.innerHeight - element.getBoundingClientRect().top;
-  if (elementTopFromWindowBottom > 0) {
+  if (elementTopFromWindowBottom > -40) {
     element.classList.remove("appear");
   }
 });
@@ -136,3 +136,32 @@ cards.forEach((card) => {
     }
   });
 });
+
+
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("feedback");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" dot-active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " dot-active";
+}
