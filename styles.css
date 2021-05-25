@@ -632,6 +632,16 @@ a#RDV:hover {
 }
 /********************* INDEX *********************/
 
+.accueil {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 32px;
+}
+
+.accueil p {
+}
+
 .contact, .tarifs{
   width: 90%;
   margin: 0 auto;
