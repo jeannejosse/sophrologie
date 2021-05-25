@@ -593,11 +593,6 @@ a#RDV:hover {
     font-size: 11px;
   }
 
-  #RDV {
-    /*margin-top: -32px;*/
-  }
-
-
   .nav-small-screen {
     display: none;
  /*   margin-bottom: 16px;
@@ -637,6 +632,10 @@ a#RDV:hover {
   margin: 0 auto;
   text-align: center;
   margin-top: 32px;
+}
+
+#RDV-mobile {
+  display: none;
 }
 
 .accueil p {
@@ -769,14 +768,30 @@ img.avatar-large {
 
 @media all and (max-device-width: 480px) {
 
-/*  html {
-    width: 100%;
-  }*/
+  .RDV {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+    margin-top: 32px;
+  }
 
-  .index-main-content {
-    /*width: 100%;*/
-    /*max-width: 90%;*/
-    /*margin: 0 auto;*/
+  #RDV-mobile {
+  background-color: #0596de;
+  width: 264px;
+  height: 40px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s linear;
+  box-shadow: 0 10px 30px rgba(0,0,0,.3);
+  color: white;
+  text-align: center;
+  }
+
+  #RDV-mobile:hover {
+    border-bottom: none;
+    background-color: #13689E;
   }
 
   .photos-small-screen {
