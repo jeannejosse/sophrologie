@@ -113,10 +113,10 @@ img.centered {
 
 .bounce {
     position: relative;
-    -webkit-animation: bounce .7s ease-in-out;
-    -moz-animation: bounce .7s ease-in-out;
-    -o-animation: bounce .7s ease-in-out;
-    animation: bounce .7s ease-in-out;
+    -webkit-animation: bounce 1.5s ease-in-out;
+    -moz-animation: bounce 1.5s ease-in-out;
+    -o-animation: bounce 1.5s ease-in-out;
+    animation: bounce 1.5s ease-in-out;
 }
 
   /*@-webkit-keyframes bounce {
@@ -144,27 +144,27 @@ img.centered {
   }*/
 
   @-webkit-keyframes bounce {
-    0%       { bottom:-30px; }
-    75%      { bottom:0px; }
-    100%     {bottom:0px;}
+    0%       { left:-50px; }
+    75%      { left:0px; }
+    100%     {left:0px;}
   }
 
    @-moz-keyframes bounce {
-    0%       { bottom:-30px; }
-    75%      { bottom:0px; }
-    100%     {bottom:0px;}
+    0%       { left:-50px; }
+    75%      { left:0px; }
+    100%     {left:0px;}
   }
 
    @-o-keyframes bounce {
-    0%       { bottom:-30px; }
-    75%      { bottom:0px; }
-    100%     {bottom:0px;}
+    0%       { left:-50px; }
+    75%      { left:0px; }
+    100%     {left:0px;}
   }
 
    @keyframes bounce {
-    0%       { bottom:-30px; }
-    75%      { bottom:0px; }
-    100%     {bottom:0px;}
+    0%       { left:-50px; }
+    75%      { left:0px; }
+    100%     {left:0px;}
   }
 
   @media screen and (max-width: 1024px) {
@@ -985,7 +985,8 @@ img.avatar-large {
 /********************* FEEDBACK SLIDESHOW *********************/
 .slideshow-container {
   position: relative;
-  background: #f1f1f1f1;
+  background: rgba(166, 203, 204,0.50);
+  /*box-shadow: 0 10px 30px rgba(0,0,0,.3);*/
   height: 112px;
 }
 
