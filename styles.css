@@ -111,61 +111,70 @@ img.centered {
   margin: 0 auto;
 }
 
-.bounce {
+.slide-ion {
     position: relative;
-    -webkit-animation: bounce 1.5s ease-in-out;
-    -moz-animation: bounce 1.5s ease-in-out;
-    -o-animation: bounce 1.5s ease-in-out;
-    animation: bounce 1.5s ease-in-out;
+    -webkit-animation: slide-in 1.5s ease-out;
+    -moz-animation: slide-in 1.5s ease-out;
+    -o-animation: slide-in 1.5s ease-out;
+    animation: slide-in 1.5s ease-out;
 }
 
-  /*@-webkit-keyframes bounce {
-    0%       { bottom:0px; }
-    50%      { bottom:20px; }
-    100%     {bottom:0px;}
-  }
-
-   @-moz-keyframes bounce {
-    0%       { bottom:0px; }
-    50%      { bottom:20px; }
-    100%     {bottom:0px;}
-  }
-
-   @-o-keyframes bounce {
-    0%       { bottom:0px; }
-    50%      { bottom:20px; }
-    100%     {bottom:0px;}
-  }
-
-   @keyframes bounce {
-    0%       { bottom:0px; }
-    50%      { bottom:20px; }
-    100%     {bottom:0px;}
-  }*/
-
-  @-webkit-keyframes bounce {
-    0%       { left:-50px; }
-    75%      { left:0px; }
+  @-webkit-keyframes slide-in {
+    0%       { left:-50px;}
     100%     {left:0px;}
   }
 
-   @-moz-keyframes bounce {
-    0%       { left:-50px; }
-    75%      { left:0px; }
+   @-moz-keyframes slide-in {
+    0%       { left:-50px;}
     100%     {left:0px;}
   }
 
-   @-o-keyframes bounce {
-    0%       { left:-50px; }
-    75%      { left:0px; }
+   @-o-keyframes slide-in {
+    0%       { left:-50px;}
     100%     {left:0px;}
   }
 
-   @keyframes bounce {
-    0%       { left:-50px; }
-    75%      { left:0px; }
+   @keyframes slide-in {
+    0%       { left:-50px;}
     100%     {left:0px;}
   }
+
+  .fade-in {
+    position: relative;
+    -webkit-animation: fade-in 1.5s ease-out;
+    -moz-animation: fade-in 1.5s ease-out;
+    -o-animation: fade-in 1.5s ease-out;
+    animation: fade-in 1.5s ease-out;
+}
+
+  @-webkit-keyframes fade-in {
+    0%       {
+               opacity: 0;}
+    100%     {
+              opacity: 1;}
+  }
+
+   @-moz-keyframes fade-in {
+    0%       {
+               opacity: 0;}
+    100%     {
+               opacity: 1;}
+  }
+
+   @-o-keyframes fade-in {
+    0%       {
+               opacity: 0;}
+    100%     {
+               opacity: 1;}
+  }
+
+   @keyframes fade-in {
+    0%       {
+               opacity: 0;}
+    100%     {
+               opacity: 1;}
+  }
+
 
   @media screen and (max-width: 1024px) {
     .main-content {
@@ -366,14 +375,31 @@ a#RDV:hover {
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 
   background-color: transparent;
-  left: -46px;
+
   text-align: center;
   border-radius: 4px;
   /*margin-top: 12px;*/
 }
 
-.dropdown-content-large-screen {
+.dropdown-content-sophro {
+  left: -46px;
+}
+
+
+.dropdown-content-accueil {
+  left: -74px;
+}
+
+.dropdown-content-large-screen-not-scrolled {
   box-shadow: none;
+  background-color: transparent;
+  color: white;
+}
+
+.dropdown-content-large-screen-scrolled {
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  background-color: white;
+  color: black;
 }
 
 .spacing {
@@ -641,7 +667,7 @@ a#RDV:hover {
 .accueil p {
 }
 
-.contact, .tarifs{
+.contact, .tarif{
   width: 90%;
   margin: 0 auto;
   display: flex;
@@ -985,30 +1011,36 @@ img.avatar-large {
 /********************* FEEDBACK SLIDESHOW *********************/
 .slideshow-container {
   position: relative;
-  background: rgba(166, 203, 204,0.50);
+  background: #fff;
   /*box-shadow: 0 10px 30px rgba(0,0,0,.3);*/
-  height: 112px;
+  /*height: 112px;*/
+  width: 90%;
+  margin: auto;
 }
 
 .feedback {
   display: none;
   padding: 16px;
   text-align: center;
+  width: 80%;
+  margin: auto;
+  transform: translateZ(0px);
 }
 
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 16px;
   width: auto;
   margin-top: -30px;
   padding: 16px;
-  color: #888;
-  font-weight: bold;
-  font-size: 20px;
+  color: #474F5B;
+  /*font-weight: bold;*/
+  font-size: 56px;
   border-radius: 0 3px 3px 0;
   user-select: none;
+  transition: ease-in-out 0.8s;
 }
 
 /* Position the "next button" to the right */
@@ -1020,8 +1052,9 @@ img.avatar-large {
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-  color: white;
+  /*background-color: #36989b;*/
+  color: #9CC5C7;
+  transition: ease-in-out 0.1s;
 }
 
 /* The dot/bullet/indicator container */
@@ -1051,13 +1084,14 @@ img.avatar-large {
 /* Add an italic font style to all quotes */
 q {
   font-style: italic;
-  height: 40px;
+  color: #36989b;
+  /*height: 40px;*/
   /*display: inline-block;*/
 /*  overflow: hidden;*/
   /*text-overflow: ellipsis;*/
 /*  white-space: nowrap;
   text-overflow: '…"';*/
-  width: 90%;
+  /*width: 90%;*/
   margin: 0 auto;
 }
 
@@ -1068,25 +1102,39 @@ q {
 }
 
 .truncate {
-  position: relative;
+ /* position: relative;
   white-space: nowrap;
   word-wrap: break-word;
   overflow: hidden;
   display: inline-block;
   text-overflow: ellipsis;
-  /*max-width: 90%;*/
-  padding-right: 7px; /* adjust based on font size */
+  padding-right: 7px;*/ /* adjust based on font size */
 }
 .truncate:before {
-  content: "«";
+  /*content: "«";*/
 }
 .truncate:after {
-  content: "»";
+  /*content: "»";
   display: block;
   position: absolute;
   top: 0;
   right: 0;
-  width: 10px;
+  width: 10px;*/
+}
+
+/* For smartphone devices*/
+@media all and (max-device-width: 480px) {
+  q {
+    font-size: 16px;
+  }
+
+  .prev:hover, .next:hover {
+    color: #474F5B;
+  }
+
+  .feedback {
+    width: 70%;
+  }
 }
 
 /********************* FOOTER *********************/

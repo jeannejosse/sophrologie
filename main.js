@@ -7,16 +7,15 @@ const toggleClasses = function (selector, oldClass, newClass) {
 
 window.addEventListener('scroll',function(e){
   if (window.innerWidth > 1024) {
-    if(window.scrollY < 72) {
-      document.querySelector(".dropdown-content-large-screen").style.backgroundColor ="transparent";
-      document.querySelector(".dropdown-content-large-screen").style.boxShadow ="none";
-      document.querySelector(".dropdown-content-large-screen").style.color ="white";
-
+    if(window.scrollY < 34) {
+      toggleClasses(".dropdown-content-accueil", "dropdown-content-large-screen-scrolled", "dropdown-content-large-screen-not-scrolled");
     } else {
-      // console.log(document.querySelector(".dropdown-content"));
-      document.querySelector(".dropdown-content-large-screen").style.backgroundColor ="white";
-      document.querySelector(".dropdown-content-large-screen").style.boxShadow ="0px 8px 16px 0px rgba(0,0,0,0.2)";
-      document.querySelector(".dropdown-content-large-screen").style.color ="black";
+      toggleClasses(".dropdown-content-accueil", "dropdown-content-large-screen-not-scrolled", "dropdown-content-large-screen-scrolled");
+    }
+    if(window.scrollY < 72) {
+      toggleClasses(".dropdown-content-sophro", "dropdown-content-large-screen-scrolled", "dropdown-content-large-screen-not-scrolled");
+    } else {
+      toggleClasses(".dropdown-content-sophro", "dropdown-content-large-screen-not-scrolled", "dropdown-content-large-screen-scrolled");
     }
     if(window.scrollY < 176) {
       toggleClasses("header", "scrolled", "not-scrolled");
@@ -94,12 +93,12 @@ document.body.addEventListener('click', (e) => {
 // Appear animation
 
 // Remove the class "appear" from elements that are already visible when the page loads
-document.querySelectorAll(".appear").forEach((element) => {
-  const elementTopFromWindowBottom = window.innerHeight - element.getBoundingClientRect().top;
-  if (elementTopFromWindowBottom > -40) {
-    element.classList.remove("appear");
-  }
-});
+// document.querySelectorAll(".appear").forEach((element) => {
+//   const elementTopFromWindowBottom = window.innerHeight - element.getBoundingClientRect().top;
+//   if (elementTopFromWindowBottom > -40) {
+//     element.classList.remove("appear");
+//   }
+// });
 
 var scrollBefore = 0;
 document.addEventListener('scroll', (e) => {
@@ -113,12 +112,12 @@ document.addEventListener('scroll', (e) => {
       const elementTopFromWindowBottom = window.innerHeight - element.getBoundingClientRect().top;
 
       // console.log(elementBottomFromWindowBottom);
-      if (elementTopFromWindowBottom < 160 && window.innerHeight > 500 && !element.classList.contains('bounce')) {
+      if (elementTopFromWindowBottom < 160 && window.innerHeight > 500 && !element.classList.contains('slide-in')) {
         element.style.visibility = "hidden";
-        // element.classList.remove("bounce");
+        // element.classList.remove("slide-in");
       } else {
         element.style.visibility = "visible";
-        element.classList.add("bounce");
+        element.classList.add("slide-in", "fade-in");
       }
     });
   }
