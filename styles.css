@@ -111,7 +111,7 @@ img.centered {
   margin: 0 auto;
 }
 
-.slide-ion {
+.slide-in {
     position: relative;
     -webkit-animation: slide-in 1.5s ease-out;
     -moz-animation: slide-in 1.5s ease-out;
@@ -119,79 +119,135 @@ img.centered {
     animation: slide-in 1.5s ease-out;
 }
 
-  @-webkit-keyframes slide-in {
-    0%       { left:-50px;}
-    100%     {left:0px;}
-  }
-
-   @-moz-keyframes slide-in {
-    0%       { left:-50px;}
-    100%     {left:0px;}
-  }
-
-   @-o-keyframes slide-in {
-    0%       { left:-50px;}
-    100%     {left:0px;}
-  }
-
-   @keyframes slide-in {
-    0%       { left:-50px;}
-    100%     {left:0px;}
-  }
-
-  .fade-in {
-    position: relative;
-    -webkit-animation: fade-in 1.5s ease-out;
-    -moz-animation: fade-in 1.5s ease-out;
-    -o-animation: fade-in 1.5s ease-out;
-    animation: fade-in 1.5s ease-out;
+@-webkit-keyframes slide-in {
+  0%       { left:-50px;}
+  100%     {left:0px;}
 }
 
-  @-webkit-keyframes fade-in {
-    0%       {
-               opacity: 0;}
-    100%     {
-              opacity: 1;}
+ @-moz-keyframes slide-in {
+  0%       { left:-50px;}
+  100%     {left:0px;}
+}
+
+ @-o-keyframes slide-in {
+  0%       { left:-50px;}
+  100%     {left:0px;}
+}
+
+ @keyframes slide-in {
+  0%       { left:-50px;}
+  100%     {left:0px;}
+}
+
+.fade-in {
+  position: relative;
+  -webkit-animation: fade-in 1.5s ease-out;
+  -moz-animation: fade-in 1.5s ease-out;
+  -o-animation: fade-in 1.5s ease-out;
+  animation: fade-in 1.5s ease-out;
+}
+
+@-webkit-keyframes fade-in {
+  0%       {
+             opacity: 0;}
+  100%     {
+            opacity: 1;}
+}
+
+ @-moz-keyframes fade-in {
+  0%       {
+             opacity: 0;}
+  100%     {
+             opacity: 1;}
+}
+
+ @-o-keyframes fade-in {
+  0%       {
+             opacity: 0;}
+  100%     {
+             opacity: 1;}
+}
+
+ @keyframes fade-in {
+  0%       {
+             opacity: 0;}
+  100%     {
+             opacity: 1;}
+}
+
+
+.slide-left {
+    position: relative;
+    -webkit-animation: slide-left 1.5s ease-out;
+    -moz-animation: slide-left 1.5s ease-out;
+    -o-animation: slide-left 1.5s ease-out;
+    animation: slide-left 1.5s ease-out;
+}
+
+@-webkit-keyframes slide-left {
+  0%       { left:-50px;}
+  100%     {left:0px;}
+}
+
+ @-moz-keyframes slide-left {
+  0%       { left:-50px;}
+  100%     {left:0px;}
+}
+
+ @-o-keyframes slide-left {
+  0%       { left:-50px;}
+  100%     {left:0px;}
+}
+
+ @keyframes slide-left {
+  0%       { left:-50px;}
+  100%     {left:0px;}
+}
+
+.slide-right {
+    position: relative;
+    -webkit-animation: slide-right 1.5s ease-out;
+    -moz-animation: slide-right 1.5s ease-out;
+    -o-animation: slide-right 1.5s ease-out;
+    animation: slide-right 1.5s ease-out;
+}
+
+@-webkit-keyframes slide-right {
+  0%       { right:-50px;}
+  100%     {right:0px;}
+}
+
+ @-moz-keyframes slide-right {
+  0%       { right:-50px;}
+  100%     {right:0px;}
+}
+
+ @-o-keyframes slide-right {
+  0%       { right:-50px;}
+  100%     {right:0px;}
+}
+
+ @keyframes slide-right {
+  0%       { right:-50px;}
+  100%     {right:0px;}
+}
+
+@media screen and (max-width: 1024px) {
+  .main-content {
+    padding: 0;
+  }
+}
+
+@media screen and (max-device-width: 480px) {
+  .main-content {
+    width: 90%;
+    font-size: 16px;
   }
 
-   @-moz-keyframes fade-in {
-    0%       {
-               opacity: 0;}
-    100%     {
-               opacity: 1;}
+  .main-content h1 {
+    font-size: 30px;
   }
-
-   @-o-keyframes fade-in {
-    0%       {
-               opacity: 0;}
-    100%     {
-               opacity: 1;}
-  }
-
-   @keyframes fade-in {
-    0%       {
-               opacity: 0;}
-    100%     {
-               opacity: 1;}
-  }
-
-
-  @media screen and (max-width: 1024px) {
-    .main-content {
-      padding: 0;
-    }
-  }
-
-  @media screen and (max-device-width: 480px) {
-    .main-content {
-      width: 90%;
-      font-size: 16px;
-    }
-
-    .main-content h1 {
-      font-size: 30px;
-    }
-  }
+}
 
 /********************* HEADER & NAV BAR *********************/
 
@@ -347,7 +403,7 @@ a.underline-scrolled:hover:after { transform: scaleX(1); }
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.2s linear;
+  transition: ease-out 0.8s;
   box-shadow: 0 10px 30px rgba(0,0,0,.3);
   color: white;
 }
@@ -355,6 +411,7 @@ a.underline-scrolled:hover:after { transform: scaleX(1); }
 a#RDV:hover {
   border-bottom: none;
   background-color: #13689E;
+  transition: ease-out 0.1s;
 }
 
 /* Dropdown menu */
@@ -769,6 +826,10 @@ img.avatar-large {
     width: 348px;
   }
 
+  .photo-small-screen2 {
+    margin-bottom: 32px;
+  }
+
   img.photo-cab {
     margin-top: 0;
   }
@@ -895,7 +956,7 @@ img.avatar-large {
   margin: 20px 10px;
   /*border: 1px solid black;*/
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
-
+  transition: ease-out 1s;
 }
 
 .flip-card ul {
@@ -913,10 +974,16 @@ img.avatar-large {
   transform-style: preserve-3d;
 }
 
+.flip-card:hover {
+  transform: scale(1.1);
+  transition: ease-out 0.1s;
+}
+
 /* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
+ .flip-card-inner {
   /*transform: rotateY(180deg);*/
   transform: scale(1.1);
+  transition: ease-out 0.8s;
 }
 
 .flip-card.flipped .flip-card-inner {
@@ -1013,7 +1080,7 @@ img.avatar-large {
   position: relative;
   background: #fff;
   /*box-shadow: 0 10px 30px rgba(0,0,0,.3);*/
-  /*height: 112px;*/
+  min-height: 320px;
   width: 90%;
   margin: auto;
 }
