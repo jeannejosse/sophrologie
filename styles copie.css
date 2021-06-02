@@ -478,12 +478,12 @@ a#RDV:hover {
 }
 
 .dropdown-content-sophro {
-  left: -59px;
+  left: -46px;
 }
 
 
 .dropdown-content-accueil {
-  left: -38px;
+  left: -74px;
 }
 
 .dropdown-content-large-screen-not-scrolled {
@@ -759,14 +759,24 @@ a#RDV:hover {
   }
 
 
+  .section2{
+    height: 50vh;
+    background-image: url(images/cabinet2.jpg);
+    background-attachment: fixed;
 
+    background-size: cover;
+  }
 
 
 .accueil {
   width: 90%;
   margin: 0 auto;
   text-align: center;
-  margin-top: 32px;
+  /*margin-top: 32px;*/
+  min-height: 59vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #RDV-mobile {
@@ -786,7 +796,7 @@ a#RDV:hover {
 
 .contact-text, .tarif-text {
   height: 222px;
-  margin-top: 40px;
+  /*margin-top: 40px;*/
   /*overflow-y: scroll;*/
   display: flex;
   flex-direction: column;
@@ -794,7 +804,7 @@ a#RDV:hover {
   flex-grow: 1;
 
   padding: 16px;
-  border: solid rgba(0,0,0,0.2);
+  /*border: solid rgba(0,0,0,0.2);*/
   border-radius: 4px;
   text-align: center;
   min-width: 615px;
@@ -827,6 +837,7 @@ img.photo-cab {
 .infos-covid {
   border: solid orange;
   width: 480px;
+  height: 200px;
   margin: 48px auto 0 auto;
   padding: 10px 0;
   text-align: center;
@@ -834,6 +845,9 @@ img.photo-cab {
   border-radius: 16px;
   background-color: white;
   box-shadow: 0 10px 30px rgba(0,0,0,.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 img.avatar-large {

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jeanne Josse Sophrologie - Renforcer son équilibre de vie </title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles copie.css">
     <meta name="google-site-verification" content="EsL5fTPPzKaFdEBXyZW3XBhgoSjL9XhYRtrVBg4x21w" />
     <link rel="icon" href="images/favicon.ico" />
     <script src="https://kit.fontawesome.com/0a6dd84551.js" crossorigin="anonymous"></script>
@@ -130,6 +130,9 @@
         <a href="https://www.doctolib.fr/sophrologue/morsang-sur-orge/jeanne-josse" id="RDV-mobile">Prendre RDV sur Doctolib</a>
       </div>
 
+      <div class="section1"></div>
+
+      <br>
       <div class="contact">
         <div class="contact-text appears">
           <h1>Contact </h1>
@@ -137,17 +140,35 @@
           <!-- <p style="margin: 0; padding: 0"> <em>(<i class="fas fa-exclamation-triangle"></i> Il existe également le 67 sur cette même route de Corbeil à Sainte-Geneviève-des-Bois)</em></p> -->
           <p>Vous pouvez me joindre par téléphone pour une première prise de contact : <br class="smartphone"> <strong><a href="tel:0766008756" class="tel">07 66 00 87 56</a></strong> <br class="large-screen"> Je serai ravie de prendre le temps de répondre à vos questions</p>
         </div>
-        <img src="images/cabinet2.jpg" alt="Mon cabinet" class="photo-cab photo-large-screen">
+        <div id="map" style="width: 400px; height: 300px;"></div>
+        <!-- <img src="images/cabinet2.jpg" alt="Mon cabinet" class="photo-cab photo-large-screen"> -->
         <span id="tarif"></span>
       </div>
+      <br>
+
+      <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8r_FiATd2I66f6Lmm-Db0Df1OZbV83-Y&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
 
       <div class="photos-small-screen appears">
         <img src="images/cabinet2.jpg" alt="Mon cabinet" class="photo-cab photo-small-screen1">
         <img src="images/cabinet1.jpg" alt="Mon cabinet" class="photo-cab photo-small-screen2">
       </div>
 
+      <div class="section2"></div>
+
+      <br>
       <div class="tarif appears">
-        <img src="images/cabinet1.jpg" alt="Mon cabinet" class="photo-cab photo-large-screen">
+        <!-- <img src="images/cabinet1.jpg" alt="Mon cabinet" class="photo-cab photo-large-screen"> -->
+        <div class="infos-covid appears">
+          <p style="color:black; margin: 0 0 5px 0; font-weight: 900;">INFOS COVID-19 :</p>
+          <br>
+          Les consultations en cabinet sont maintenues <br>
+          Téléconsultations sur demande
+          <span id="motifs-consultation"></span>
+        </div>
+
         <div class="tarif-text">
           <h1>Tarif </h1>
           <p style="font-size: 20px; margin-bottom: 8px">Séance individuelle (45 min à 1h)&nbsp;: <strong>60 €</strong></p>
@@ -156,12 +177,7 @@
         </div>
       </div>
 
-      <div class="infos-covid appears">
-        <p style="color:black; margin: 0 0 5px 0; font-weight: 900;">INFOS COVID-19 :</p>
-        Les consultations en cabinet sont maintenues <br>
-        Téléconsultations sur demande
-        <span id="motifs-consultation"></span>
-      </div>
+
 
       <br>
       <h1 class="text-centered appears">Motifs de consultation fréquents :</h1>
