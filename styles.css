@@ -44,13 +44,13 @@
 
 h1{
   color: #443F3F;
-  font-family: "Kaushan Script";
+  font-family: "Kaushan Script", sans serif;
   font-size: 36px;
 }
 
 h2{
   font-size: 20px;
-  font-family: 'Raleway';
+  font-family: 'Raleway', sans serif;
 }
 
 a{
