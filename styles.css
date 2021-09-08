@@ -42,13 +42,13 @@
 
 /********************* MAIN STYLES *********************/
 
-h2{
+h1{
   color: #443F3F;
   font-family: "Kaushan Script", sans serif;
   font-size: 36px;
 }
 
-h1{
+h2{
   font-size: 20px;
   font-family: 'Raleway', sans serif;
 }
@@ -283,7 +283,7 @@ img.centered {
     font-size: 16px;
   }
 
-  .main-content h2 {
+  .main-content h1 {
     font-size: 30px;
   }
 }
@@ -362,11 +362,11 @@ header.scrolled {
   background-color: rgba(166, 203, 204,0.90);
 }
 
-header h2{
+header h1{
   color: #fff;
 }
 
-header h1{
+header h2{
   position: relative;
   font-size: 12px;
   bottom: 16px;
@@ -711,7 +711,7 @@ a#RDV:hover {
     padding-left: 0;
   }
 
-  header h1 {
+  header h2 {
     font-size: 11px;
   }
 
@@ -808,7 +808,7 @@ a#RDV:hover {
   margin-left: 32px;
 }
 
-.contact-text > h2, .tarif-text > h2 {
+.contact-text > h1, .tarif-text > h1 {
   margin-top: 0;
   line-height: 0.8;
 }
