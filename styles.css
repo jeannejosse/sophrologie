@@ -1058,73 +1058,43 @@ img.avatar-large {
 /* Style the back side */
 .flip-card-back {
   transform: rotateY(180deg);
-}
-
-.flip-card-back > ul {
-  height: 100%;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  line-height: 1;
-  font-size: 16px;
-}
-
-.bullet {
-  color: #A6CBCC;
+  background-size: cover;
 }
 
 .flip-card-front {
   background-size: contain;
 }
 
-.enfants {
-  background-image: url("flip-cards-images/enfants.jpg");
+.mal-etre-front {
+  background-image: url("flip-cards-images/mal-etre-front.png");
 }
 
-.ados {
-  background-image: url("flip-cards-images/ados.jpg");
+.mal-etre-back {
+  background-image: url("flip-cards-images/mal-etre-back.png");
 }
 
-.etudiants {
-  background-image: url("flip-cards-images/etudiants.jpg");
+.preparation-mentale-front {
+  background-image: url("flip-cards-images/preparation-mentale-front.png");
 }
 
-.grossesse {
-  background-image: url("flip-cards-images/grossesse.jpg");
+.preparation-mentale-back {
+  background-image: url("flip-cards-images/preparation-mentale-back.png");
 }
 
-.sommeil {
-  background-image: url("flip-cards-images/sommeil.jpg");
+.grossesse-front {
+  background-image: url("flip-cards-images/grossesse-front.png");
 }
 
-.douleurs {
-  background-image: url("flip-cards-images/douleurs.jpg");
+.grossesse-back {
+  background-image: url("flip-cards-images/grossesse-back.png");
 }
 
-.intervention {
-  background-image: url("flip-cards-images/intervention.jpg");
+.soutien-sante-front {
+  background-image: url("flip-cards-images/soutien-sante-front.png");
 }
 
-.bien-etre {
-  background-image: url("flip-cards-images/bien-etre-au-travail.jpg");
-}
-
-.maladies {
-  background-image: url("flip-cards-images/maladies.jpg");
-}
-
-.sport {
-  background-image: url("flip-cards-images/sport.jpg");
-}
-
-.performance {
-  background-image: url("flip-cards-images/performance.jpg");
-}
-
-.developpement {
-  background-image: url("flip-cards-images/developpement-personnel.jpg");
+.soutien-sante-back {
+  background-image: url("flip-cards-images/soutien-sante-back.png");
 }
 
 /********************* FEEDBACK SLIDESHOW *********************/
@@ -1262,16 +1232,17 @@ footer {
   width: 100%;
   height: 80px;
   color: #000;
-  background-color: #464F5B;
+  background-color: rgb(245, 245, 242);
   display: flex;
   /*flex-direction: column;*/
   justify-content: center;
   align-items: center;
 }
 
-.doctolib {
+.crenolib {
   width: 132px;
   padding-top: 4px;
+  margin-right: 16px;
 }
 
 .linkedin {
