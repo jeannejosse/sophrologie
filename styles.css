@@ -342,7 +342,7 @@ header{
 
 .avatar {
   position: relative;
-  top: 10px;
+  top: 17px;
   right: 16px;
   padding-left: 8px;
 }
@@ -373,7 +373,7 @@ header h2{
 
 header h1{
   position: relative;
-  font-size: 12px;
+  font-size: 15px;
   bottom: 16px;
 }
 
