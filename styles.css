@@ -785,8 +785,8 @@ a#RDV:hover {
 }
 
 .contact-text, .tarif-text {
-  height: 222px;
-  margin-top: 40px;
+  /* height: 222px; */
+  /* margin-top: 40px; */
   /*overflow-y: scroll;*/
   display: flex;
   flex-direction: column;
@@ -809,7 +809,7 @@ a#RDV:hover {
 }
 
 .contact-text > h2, .tarif-text > h2 {
-  margin-top: 40px;
+  /* margin-top: 40px; */
   line-height: 0.8;
 }
 
@@ -821,7 +821,7 @@ img.photo-cab {
   height: 260px;
   display: block;
   margin: auto;
-  margin-top: 40px;
+  /* margin-top: 40px; */
   /* box-shadow: 0 10px 30px rgba(0,0,0,.3); */
   border-radius: 4px;
 }
