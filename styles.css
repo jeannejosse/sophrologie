@@ -68,6 +68,11 @@ body{
   text-align: justify;
 }
 
+.index-intro {
+  width: 70vw;
+  margin: 0 auto;
+}
+
 .main-content{
   width: 780px;
   margin : 0 auto;
